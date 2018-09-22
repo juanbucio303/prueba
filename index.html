@@ -1,1 +1,364 @@
-hola mundo
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Curso</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="js/popper.min.js" charset="utf-8"></script>
+    <script src="js/mdb.min.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/lightbox.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.carousel').carousel();
+
+      });
+
+    </script>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-hue fixed-top">
+     <div class="container">
+      <!-- Collapse button -->
+      <a class="navbar-brand px-lg-4 mr-0 d-lg-none" href="#">
+        <img src="img/logo2.png" height="70" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse justify-content-center font-weight-bold" id="basicExampleNav">
+        <!-- Links -->
+        <ul class="navbar-nav">
+         <li class="nav-item">
+          <a class="nav-link" href="#">Contactanos</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Donativos</a>
+         </li>
+        </ul>
+        <!-- Links -->
+        <!-- Navbar brand -->
+        <a class="navbar-brand px-lg-4 mr-0 d-none d-lg-block" href="#">
+         <img src="img/logo2.png" height="70" alt="">
+        </a>
+        <!-- Links -->
+        <ul class="navbar-nav">
+         <li class="nav-item">
+          <a class="nav-link" href="#">Mitos y Mentiras</a>
+         </li>
+
+        </ul>
+        <!-- Links -->
+       </div>
+    </nav>
+<!--/.Navbar-->
+
+<div class="container-fluid">
+    <section id="home">
+
+      <!--Carousel Wrapper-->
+      <div id="carousel-with-lb" class="carousel slide carousel-multi-item d-none d-lg-block" data-ride="carousel">
+
+        <!--Controls-->
+        <div class="controls-top">
+          <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <!--/.Controls-->
+
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-with-lb" data-slide-to="0" class="active secondary-color "></li>
+        </ol>
+        <!--/.Indicators-->
+
+        <!--Slides and lightbox-->
+
+        <div class="carousel-inner mdb-lightbox sinpadding" role="listbox">
+          <div id="mdb-lightbox-ui"></div>
+          <!--First slide-->
+          <div class=" carousel-item active text-center ">
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perritos1.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <img src="img/perritos1.jpg" class="img-fluid" >
+              </a>
+            </figure>
+
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perritos2.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg" class="img-fluid"> -->
+                <img src="img/perritos2.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perritos3.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(6).jpg" class="img-fluid"> -->
+                <img src="img/perritos3.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perritos4.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="img-fluid"> -->
+                <img src="img/perritos4.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perritos5.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(12).jpg" class="img-fluid"> -->
+                <img src="img/perritos5.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perritos6.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+                <img src="img/perritos6.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+            <figure class="col-md-6 col-6 col-sm-6 col-lg-6 d-md-inline-block">
+                <h1 class="font3">Ni uno mas en la calle</h1>
+            </figure>
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perritos7.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+                <img src="img/perritos7.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perros13.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+                <img src="img/perros13.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perritos9.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+                <img src="img/perritos9.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perros10.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+                <img src="img/perros10.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perros11.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+                <img src="img/perros11.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+              <a href="img/perros12.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+                <img src="img/perros12.jpg" class="img-fluid" >
+
+              </a>
+            </figure>
+          </div>
+          <!--/.First slide-->
+          <!-- <div class=" carousel-item text-center">
+            <figure class="col-md-12 d-md-inline-block">
+              <a href="img/crecimiento perros2.png" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+                <img src="img/crecimiento perros.png" class="img-fluid" alt="Responsive image">
+              </a>
+            <!-- class="col-md-12 col-12 col-sm-12 col-lg-12 d-md-inline-block" -->
+          </div> -->
+        </div>
+        <!--/.Slides-->
+      </div>
+      <!--/.Carousel Wrapper-->
+    </section>
+    <section id="testimonial">
+      <div class="container">
+        <h1 class="font3" >Mitos y Mentiras</h1>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="mdb-lightbox-ui"></div>
+          <div class=" row mdb-lightbox no-margin">
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros22.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros22.jpg" alt="Card image cap">
+                <!-- <img src="img/perros22.jpg" class="img-fluid"> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros14.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros14.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros15.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros15.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros16.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros16.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros17.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros17.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros18.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros18.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros19.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros19.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros20.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros20.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros21.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros21.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonial">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="font3" >Ayudanos con tan solo un pequeño donativo, con tu ayuda puedes cambiar la vida de uno de estos perritos</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  <section>
+
+  </section>
+    </div>
+    <!-- Footer -->
+      <footer class="page-footer font-small blue bg-hue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+          <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+      <!-- Footer -->
+  </body>
+</html>

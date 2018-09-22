@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'helvetica-con';
+  /* Antes de descargar el archivo, le decimos al buscador
+  que intente buscar en local la fuente con nombre
+  Cabin, Cabin Regular o Cabin-Regular */
+  src: local('helvetica-con'),
+       url(../font/helvetica/helveticaneue-condensed-webfont.woff) format('woff');
+}
+@font-face {
+  font-family: 'helvetica-light';
+  src: local('helvetica-light'),
+       url(../font/helvetica/helveticaneue-light.woff) format('woff');
+}
+@font-face {
+  font-family: 'helvetica-med';
+  src: local('helvetica-med'),
+       url(../font/helvetica/HelveticaNeue-Medium.woff) format('woff');
+}
+@font-face {
+  font-family: 'helvetica-med-con';
+  src: local('helvetica-med-con'),
+       url(../font/helvetica/helveticaneue-mediumcond-webfont.woff) format('woff');
+}
+@font-face {
+  font-family: 'helvetica-thin';
+  src: local('helvetica-thin'),
+       url(../font/helvetica/helveticaneue-thin.woff) format('woff');
+}
+@font-face {
+  font-family: 'helvetica-uligtht';
+  src: local('helvetica-uligtht'),
+       url(../font/helvetica/HelveticaNeue-UltraLight.woff) format('woff');
+}
+@font-face {
+  font-family: 'helvetica';
+  src: local('helvetica'),
+       url(../font/helvetica/helveticaneue.woff) format('woff');
+}
+.nav{
+  padding-bottom: 10px;
+}
+#home{
+  padding-top: 150px;
+}
+.bg-hue{
+  /* background: #757575; */
+  background: url("../img/huellas2.png");
+  background-size: 27%;
+}
+.logo{
+  src: url("../img/logo2.png");
+}
+html,
+body,
+header,
+.jarallax {
+  height: 100vh;
+}
+
+html,
+body,
+header,
+.intro-2 {
+  height: 700px;
+}
+
+.no-margin{
+  margin: 0;
+}
+.font{
+  font-family: "helvetica-con";
+}
+.font2{
+  font-family: "helvetica-light";
+}
+.font3{
+  font-family: "helvetica-med";
+}
+.font4{
+  font-family: "helvetica-med-con";
+}
+.font5{
+  font-family: "helvetica-thin";
+}
+.font6{
+  font-family: "helvetica-uligtht";
+}
+.font7{
+  font-family: "helvetica";
+}
+#testimonial {
+  background: #f1f1f1;
+  padding: 50px 0 30px 0;
+  text-align:center;
+  margin-top: 40px;
+}
+.sinpadding [class*="col-"] {
+    padding: 0;
+}
