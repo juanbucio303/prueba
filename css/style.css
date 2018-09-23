@@ -94,6 +94,9 @@ header,
   text-align:center;
   margin-top: 40px;
 }
+.testimonial#sec-3{
+  background: #212121;
+}
 .sinpadding [class*="col-"] {
     padding: 0;
 }
@@ -179,4 +182,10 @@ header,
 }
 .pading{
   padding-left: 10px;
+}
+body{
+  background: #414141
+}
+.color-txt{
+  color: white;
 }
