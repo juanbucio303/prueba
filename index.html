@@ -12,12 +12,21 @@
     <script src="js/mdb.min.js" charset="utf-8"></script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/lightbox.js" charset="utf-8"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+
     <script type="text/javascript">
       $(document).ready(function(){
         $('.carousel').carousel();
 
       });
-
+      smoothScroll.init({
+      selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+      selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+      speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+      easing: 'easeInOutCubic', // Easing pattern to use
+      offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+      callback: function ( anchor, toggle ) {} // Function to run after scrolling
+      });
     </script>
   </head>
   <body>
@@ -37,21 +46,21 @@
         <!-- Links -->
         <ul class="navbar-nav">
          <li class="nav-item">
-          <a class="nav-link" href="#">Contactanos</a>
+          <a class="nav-link" data-scroll href="#sec-4">Contactanos</a>
          </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">Donativos</a>
+          <a class="nav-link" data-scroll href="#sec-3">Donativos</a>
          </li>
         </ul>
         <!-- Links -->
         <!-- Navbar brand -->
-        <a class="navbar-brand px-lg-4 mr-0 d-none d-lg-block" href="#">
+        <a class="navbar-brand px-lg-4 mr-0 d-none d-lg-block" data-scroll href="#sec-1">
          <img src="img/logo2.png" height="70" alt="">
         </a>
         <!-- Links -->
         <ul class="navbar-nav">
          <li class="nav-item">
-          <a class="nav-link" href="#">Mitos y Mentiras</a>
+          <a class="nav-link" data-scroll href="#sec-2">Mitos, Mentiras y Verdades</a>
          </li>
 
         </ul>
@@ -61,7 +70,7 @@
 <!--/.Navbar-->
 
 <div class="container-fluid">
-    <section id="home">
+    <section id="sec-1">
 
       <!--Carousel Wrapper-->
       <div id="carousel-with-lb" class="carousel slide carousel-multi-item d-none d-lg-block" data-ride="carousel">
@@ -129,9 +138,13 @@
 
               </a>
             </figure>
-            <div class="col-md-6 col-6 col-sm-6 col-lg-6 d-md-inline-block mx-auto">
-                <h1 class="font3 " >Ni uno mas en la calle</h1>
-            </div>
+            <figure class="col-md-6 col-6 col-sm-6 col-lg-6 d-md-inline-block">
+              <a href="img/perritos1.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+              <img src="img/ni uno mas.png" class="img-fluid" >
+              <!-- <h1 class="font3 " >Ni uno mas en la calle</h1> -->
+                <img src="img/blanco.png" class="img-fluid" >
+              </a>
+            </figure>
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
               <a href="img/perritos7.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
@@ -195,9 +208,9 @@
       </div>
       <!--/.Carousel Wrapper-->
     </section>
-    <section id="testimonial">
+    <section class="testimonial" id="sec-2">
       <div class="container">
-        <h1 class="font3" >Mitos y Mentiras</h1>
+        <h1 class="font3" >Mitos, Mentiras y Verdades</h1>
       </div>
     </section>
     <section>
@@ -252,7 +265,7 @@
                 <div class="card-body back text-justify">
                   <div class="d-none d-lg-block d-print-block">
                     <p class="card-text "><h2 class="font3">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS CALLEJEROS.</h2>
-                      <h2 class="font3 text-danger">Falso: </h2><h3 class="font6">La fábrica de perros, está en las casas de dueños que no
+                      <h2 class="font3 text-danger">Falso: </h2><h3 class="font4">La fábrica de perros, está en las casas de dueños que no
                       esterilizan a sus animales. Muchos dueños permiten que sus animales
                       salgan de casa solos y es ahí cuando frecuentemente se cruzan.</h3>
                     </p>
@@ -273,24 +286,43 @@
 
                 </div>
             </figure>
-            <figure class="col-md-6">
-                <div class="card-body">
+            <figure class="col-md-6 card2">
+                <div class="card-body front text-justify">
                   <!-- <h4 class="card-title"><a>Card title</a></h4> -->
-                  <p class="card-text "><h2 class="font3">Los perros nunca me muerden.
+                  <div class="d-none d-lg-block d-print-block">
+                      <p class="card-text "><h4 class="font3">Los perros nunca me muerden.
+                        Sólo los seres humanos lo hacen.
+                      </h4>
+                    </p>
+                    <p class="card-text">
+                      <h2 class="font">Marilyn Monroe</h2>
+                    </p>
+                    <p class="card-text  "> <h4 class="text-danger font3">Dogs never bite me. Just humans</h4>
+                    </p>
+                    <p class="card-text ">
+                      <h2 class="text-danger font">Marilyn Monroe</h2>
+                    </p>
+                  </div>
+                  <div class=" d-lg-none d-print-block">
+                    <p class="card-text "><h5 class="font3">Los perros nunca me muerden.
                       Sólo los seres humanos lo hacen.
-                    </h2>
-                  </p>
-                  <p class="card-text">
-                    <h2 class="font">Marilyn Monroe</h2>
-                  </p>
-                  <p class="card-text  "> <h2 class="text-danger font3">Dogs never bite me. Just humans</h2>
-                  </p>
-                  <p class="card-text ">
-                    <h2 class="text-danger font">Marilyn Monroe</h2>
-                  </p>
+                    </h5>
+                    </p>
+                    <p class="card-text">
+                      <h3 class="font">Marilyn Monroe</h3>
+                    </p>
+                    <p class="card-text  "> <h5 class="text-danger font3">Dogs never bite me. Just humans</h5>
+                    </p>
+                    <p class="card-text ">
+                      <h3 class="text-danger font">Marilyn Monroe</h3>
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body back text-justify">
+                    jdkl
                 </div>
             </figure>
-            <figure class="col-md-6 view overlay zoom">
+            <figure class="col-md-6 view overlay zoom cardBox">
               <div class="card">
                 <a href="img/perros14.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
                   <img class="card-img-top" src="img/perros14.jpg" alt="Card image cap">
@@ -298,7 +330,7 @@
                 </a>
               </div>
             </figure>
-            <figure class="col-md-6 view overlay zoom">
+            <figure class="col-md-6 view overlay zoom cardBox">
               <div class="card">
                 <a href="img/perros15.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
                   <img class="card-img-top" src="img/perros15.jpg" alt="Card image cap">
@@ -306,22 +338,45 @@
                 </a>
               </div>
             </figure>
-            <figure class="col-md-6">
-                <div class="card-body">
-                  <p class="card-text "><h2 class="font3">Tener compasión de todos los seres vivos,es
-                    lo que hace al hombre realmente humano.
-                  </h2>
+            <figure class="col-md-6 card2">
+                  <div class="card-body front text-justify">
+                    <p class="card-text "><h4 class="font3">Tener compasión de todos los seres vivos, es
+                      lo que hace al hombre realmente humano.
+                    </h4>
                   </p>
                   <p class="card-text">
                     <h2 class="font">Albert Schweitzer</h2>
                   </p>
-                  <p class="card-text  "> <h2 class="text-danger font3">Until he estends his circle of compassion to
-                    include all living things, man will not himself.</h2>
+                  <p class="card-text  "> <h4 class="text-danger font3">Until he estends his circle of compassion to
+                    include all living things, man will not himself.</h4>
                   </p>
                   <p class="card-text ">
                     <h2 class="text-danger font">Albert Schweitzer</h2>
                   </p>
-                </div>
+                  </div>
+                  <div class="card-body back text-justify">
+                      <div class="d-none d-lg-block d-print-block">
+                        <p class="card-text "><h4 class="font3">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h4>
+                          <h4 class="font3 text-danger">VERDAD A MEDIAS: </h4><h5 class="font4">al ser esterilizados, la actividad sexual
+                            se reduce drasticamente y su organismo debe gastar menos energía.</h5>
+
+                          <h4 class="font3 text-danger">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h4>
+                          <h4 class="font3 ">PARTLY TRUE: </h4><h5 class="font4 text-danger">When they are neutered, sexual activity
+                            decreases drastically and their organism uses less energy.</h5>
+                        </p>
+                      </div>
+                      <div class=" d-lg-none d-print-block">
+                        <p class="card-text "><h4 class="font3">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h4>
+                          <h4 class="font3 text-danger">VERDAD A MEDIAS: </h4><h5 class="font4">al ser esterilizados, la actividad sexual
+                            se reduce drasticamente y su organismo debe gastar menos energía.</h5>
+                            <br>
+                          <h4 class="font3 text-danger">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h4>
+                          <h4 class="font3 ">PARTLY TRUE: </h4><h5 class="font4 text-danger">When they are neutered, sexual activity
+                            decreases drastically and their organism uses less energy.</h5>
+                        </p>
+                      </div>
+                  </div>
+
             </figure>
             <figure class="col-md-6">
                 <div class="card-body">
@@ -349,7 +404,7 @@
                 </a>
               </div>
             </figure>
-            <figure class="col-md-6 view overlay zoom">
+            <figure class="col-md-6 view overlay zoom cardBox">
               <div class="card">
                 <a href="img/perros17.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
                   <img class="card-img-top" src="img/perros17.jpg" alt="Card image cap">
@@ -357,23 +412,46 @@
                 </a>
               </div>
             </figure>
-            <figure class="col-md-6">
-                <div class="card-body">
-                  <p class="card-text "><h2 class="font3">Un perro enseña a un muchacho fidelidad,
-                    perseverancia y a dar vueltas tres veces antes de acostarse.
-                  </h2>
+            <figure class="col-md-6 card2">
+                  <div class="card-body front text-justify">
+                    <p class="card-text "><h4 class="font3">Un perro enseña a un muchacho fidelidad,
+                      perseverancia y a dar vueltas tres veces antes de acostarse.
+                    </h4>
                   </p>
                   <p class="card-text">
                     <h2 class="font">Robert Benchley</h2>
                   </p>
-                  <p class="card-text  "> <h2 class="text-danger font3">A dog teaches a boy fidelity, perseverance, and
-                    to turn around three times before lying down.
-                  </h2>
+                  <p class="card-text  "> <h4 class="text-danger font3">A dog teaches a boy fidelity, perseverance, and
+                    to turn around three times before lying down.</h4>
                   </p>
                   <p class="card-text ">
                     <h2 class="text-danger font">Robert Benchley</h2>
                   </p>
-                </div>
+                  </div>
+                  <div class="card-body back text-justify">
+                      <div class="d-none d-lg-block d-print-block">
+                        <p class="card-text "><h4 class="font3">LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h4>
+                          <h4 class="font3 text-danger">FALSO: </h4><h5 class="font4">La esterilización animal es una de las intervenciones
+                            más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
+                            las clínicas del mundo.</h5>
+
+                          <h4 class="font3 text-danger">NEUTERING SURGERIES ARE VERY RISKY.</h4>
+                          <h4 class="font3 ">FALSE: </h4><h5 class="font4 text-danger">The sugery to neuter an animal is one of the simplest and faster
+                            procedures done very day an whit a minimal accident rate in clinics around the world.</h5>
+                        </p>
+                      </div>
+                      <div class=" d-lg-none d-print-block">
+                        <p class="card-text "><h4 class="font3">LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h4>
+                          <h4 class="font3 text-danger">FALSO: </h4><h5 class="font4">La esterilización animal es una de las intervenciones
+                            más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
+                            las clínicas del mundo.</h5>
+                            <br>
+                          <h4 class="font3 text-danger">NEUTERING SURGERIES ARE VERY RISKY.</h4>
+                          <h4 class="font3 ">PARTLY TRUE: </h4><h5 class="font4 text-danger">The sugery to neuter an animal is one of the simplest and faster
+                            procedures done very day an whit a minimal accident rate in clinics around the world.</h5>
+                        </p>
+                      </div>
+                  </div>
             </figure>
             <figure class="col-md-6">
                 <div class="card-body">
@@ -402,7 +480,7 @@
                 </a>
               </div>
             </figure>
-            <figure class="col-md-6 view overlay zoom">
+            <figure class="col-md-6 view overlay zoom cardBox">
               <div class="card">
                 <a href="img/perros19.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
                   <img class="card-img-top" src="img/perros19.jpg" alt="Card image cap">
@@ -410,24 +488,47 @@
                 </a>
               </div>
             </figure>
-            <figure class="col-md-6">
-                <div class="card-body">
-                  <p class="card-text "><h2 class="font3">Es vergonzoso para nuestra especie que, siendo el
-                    perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
-                  </h2>
+            <figure class="col-md-6 card2">
+                  <div class="card-body front text-justify">
+                    <p class="card-text "><h4 class="font3">Es vergonzoso para nuestra especie que, siendo el
+                      perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
+                    </h4>
                   </p>
                   <p class="card-text">
                     <h2 class="font">Eduardo Lamazón</h2>
                   </p>
-                  <p class="card-text  "> <h2 class="text-danger font3">It is shameful for our species that, being the dog
-                    man's best friend, men are dogs' worst enemies.
-                    </h2>
+                  <p class="card-text  "> <h4 class="text-danger font3">It is shameful for our species that, being the dog
+                    man's best friend, men are dogs' worst enemies.</h4>
                   </p>
                   <p class="card-text ">
                     <h2 class="text-danger font">Eduardo Lamazón</h2>
                   </p>
-                </div>
+                  </div>
+                  <div class="card-body back text-justify">
+                      <div class="d-none d-lg-block d-print-block">
+                        <p class="card-text "><h4 class="font3">LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h4>
+                          <h4 class="font3 text-danger">FALSO: </h4><h5 class="font4">La esterilización animal es una de las intervenciones
+                            más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
+                            las clínicas del mundo.</h5>
+
+                          <h4 class="font3 text-danger">NEUTERING SURGERIES ARE VERY RISKY.</h4>
+                          <h4 class="font3 ">FALSE: </h4><h5 class="font4 text-danger">The sugery to neuter an animal is one of the simplest and faster
+                            procedures done very day an whit a minimal accident rate in clinics around the world.</h5>
+                        </p>
+                      </div>
+                      <div class=" d-lg-none d-print-block">
+                        <p class="card-text "><h4 class="font3">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h4>
+                          <h4 class="font3 text-danger">VERDAD A MEDIAS: </h4><h5 class="font4">al ser esterilizados, la actividad sexual
+                            se reduce drasticamente y su organismo debe gastar menos energía.</h5>
+                            <br>
+                          <h4 class="font3 text-danger">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h4>
+                          <h4 class="font3 ">PARTLY TRUE: </h4><h5 class="font4 text-danger">When they are neutered, sexual activity
+                            decreases drastically and their organism uses less energy.</h5>
+                        </p>
+                      </div>
+                  </div>
             </figure>
+
             <figure class="col-md-6">
                 <div class="card-body">
                   <p class="card-text "><h2 class="font3">Es vergonzoso para nuestra especie que, siendo el
@@ -454,36 +555,13 @@
                 </a>
               </div>
             </figure>
-
-            <figure class="col-md-6 view overlay zoom cardBox">
-              <div class="card">
-                <a href="img/perros21.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
-                  <img class="card-img-top" src="img/perros21.jpg" alt="Card image cap">
-                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
-                </a>
-              </div>
-            </figure>
-            <figure class="col-md-6 card2 ">
-                <div class="card-body front">
-                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
-                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Button</a>
-                </div>
-                <div class="card-body back">
-                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
-                  <p class="card-text font3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-            </figure>
-
-
           </div>
         </div>
       </div>
     </div>
     </section>
-    <section id="testimonial">
-      <div class="container">
+    <section class="testimonial" id="sec-3">
+      <div class="container text-justify">
         <div class="row">
           <div class="col-md-6">
             <h4 class="font3" >Ayudanos con tan solo un pequeño donativo, con tu ayuda puedes cambiar la vida de uno de estos perritos</h4>
@@ -510,7 +588,7 @@
   </section>
     </div>
     <!-- Footer -->
-      <footer class="page-footer font-small blue bg-hue">
+      <footer class="page-footer font-small blue bg-hue" id="sec-4">
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2018 Copyright:
