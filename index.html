@@ -14,12 +14,16 @@
     <script src="js/lightbox.js" charset="utf-8"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/fontawesome-all.js" charset="utf-8"></script>
-
+    <script src="js/parallax.js" charset="utf-8"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $('.carousel').carousel();
-
+        // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
+        $('.parallax-window').parallax({
+          imageSrc: 'img/perritos2.jpg'
+        });
       });
+      // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
       smoothScroll.init({
       selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
       selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
@@ -71,26 +75,59 @@
 <!--/.Navbar-->
 
 <div class="container-fluid">
+   <section class="pading">
+     <div class="parallax-window" data-parallax="scroll" data-image-src="img/perritos2.jpg">
+     <!-- Grid row -->
+     <div class="row">
+         <!-- Grid column -->
+         <div class="offset-md-6 offset-lg-7 col-md-6 col-lg-5">
+
+             <!--Card-->
+             <div class="card " style="background:#CD1A4C">
+
+                 <!--Card image-->
+                 <div class="view">
+                     <img src="img/crecimiento perros.png" class="card-img-top" alt="photo">
+                     <a href="#">
+                         <div class="mask rgba-white-slight"></div>
+                     </a>
+                 </div>
+
+                 <!--Card content-->
+                 <div class="card-body text-center">
+                     <!--Title-->
+                     <h4 class="card-title white-text"><h3 class="font3">¿CUÁL ES LA IMPORTANCIA?</h3><h3 class="font3 white-text">WHY IS IT IMPORTANT?</h3></h4>
+                     <!--Text-->
+                     <p class="card-text white-text">.</p>
+                     <a href="#" class="btn btn-outline-white btn-md waves-effect">Ver más</a>
+                 </div>
+
+             </div>
+             <!--/.Card-->
+
+         </div>
+         <!-- Grid column -->
+
+     </div>
+     <!-- Grid row -->
+     </div>
+   </section>
     <section id="sec-1">
       <!--Carousel Wrapper-->
       <div id="carousel-with-lb" class="carousel slide carousel-multi-item d-none d-lg-block" data-ride="carousel">
-
         <!--Controls-->
         <!-- <div class="controls-top">
           <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
           <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next"><i class="fa fa-chevron-right"></i></a>
         </div> -->
         <!--/.Controls-->
-
         <!--Indicators-->
         <ol class="carousel-indicators">
           <li data-target="#carousel-with-lb" data-slide-to="0" class="active secondary-color "></li>
           <!-- <li data-target="#carousel-with-lb" data-slide-to="1" class="active secondary-color "></li> -->
         </ol>
         <!--/.Indicators-->
-
         <!--Slides and lightbox-->
-
         <div class="carousel-inner mdb-lightbox sinpadding" role="listbox">
           <div id="mdb-lightbox-ui"></div>
           <!--First slide-->
@@ -100,47 +137,38 @@
                 <img src="img/perritos1.jpg" class="img-fluid" >
               </a>
             </figure>
-
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
               <a href="img/perritos2.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg" class="img-fluid"> -->
                 <img src="img/perritos2.jpg" class="img-fluid" >
-
               </a>
             </figure>
-
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
               <a href="img/perritos3.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(6).jpg" class="img-fluid"> -->
                 <img src="img/perritos3.jpg" class="img-fluid" >
-
               </a>
             </figure>
-
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
               <a href="img/perritos4.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="img-fluid"> -->
                 <img src="img/perritos4.jpg" class="img-fluid" >
-
               </a>
             </figure>
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
               <a href="img/perritos5.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(12).jpg" class="img-fluid"> -->
                 <img src="img/perritos5.jpg" class="img-fluid" >
-
               </a>
             </figure>
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
               <a href="img/perritos6.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
                 <img src="img/perritos6.jpg" class="img-fluid" >
-
               </a>
             </figure>
             <figure class="col-md-6 col-6 col-sm-6 col-lg-6 d-md-inline-block" >
               <a href="img/perritos1.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-
               <img src="img/ni uno mas2.png" class="img-fluid" >
               <!-- <h1 class="font3 " >Ni uno mas en la calle</h1> -->
                 <img src="img/blanco.png" class="img-fluid" >
@@ -150,21 +178,18 @@
               <a href="img/perritos7.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
                 <img src="img/perritos7.jpg" class="img-fluid" >
-
               </a>
             </figure>
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
               <a href="img/perros13.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
                 <img src="img/perros13.jpg" class="img-fluid" >
-
               </a>
             </figure>
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
               <a href="img/perritos9.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
                 <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
                 <img src="img/perritos9.jpg" class="img-fluid" >
-
               </a>
             </figure>
             <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
@@ -209,7 +234,8 @@
       </div>
       <!--/.Carousel Wrapper-->
     </section>
-    <section class="testimonial color-txt" id="sec-2" style="background:#212121">
+
+    <section class="testimonial color-txt" id="sec-2" style="background:#414141">
       <div class="container">
         <h1 class="font3" >Mitos, Mentiras y Verdades</h1>
       </div>
@@ -677,9 +703,9 @@
         <h1 class="font3 text-danger" >Bank information for donations</h1>
         <div class="row">
           <div class="col-md-8 text-justify font3 color-txt color-txt">
-            <h3><img src="img/banorte.png" width="40" alt="">
+            <h5><img src="img/banorte.png" width="40" alt="">
               LIGA VALLESANA PARA LOS DERECHOS DE LOS ANIMALES, AC
-            </h3>
+            </h5>
             <p>No. CUENTA: 0660 8964 69</p>
             <p>Transferencia: CLABE 0724 5700 6608 9646 99</p>
             <p><img src="img/svg/oxxo.svg" width="50"alt=""> No. Tarjeta: 4189 2810 4299 8006</p>
@@ -697,7 +723,7 @@
                   <input type="image" src="img/paypal.png" width="200" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
                   <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
                 </form>
-</p>
+            </p>
           </div>
           <div class="col-md-4">
               <img src="img/perrito1.png" alt="..." class="rounded-circle img-fluid">

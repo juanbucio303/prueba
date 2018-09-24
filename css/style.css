@@ -40,7 +40,7 @@
   padding-bottom: 10px;
 }
 #sec-1{
-  padding-top: 150px;
+  padding-top: 3%;
 }
 .bg-hue{
   /* background: #757575; */
@@ -95,7 +95,7 @@ header,
   margin-top: 40px;
 }
 .testimonial#sec-3{
-  background: #212121;
+  background: #414141;
 }
 .sinpadding [class*="col-"] {
     padding: 0;
@@ -181,11 +181,15 @@ header,
     }
 }
 .pading{
-  padding-left: 10px;
+  padding-top: 10%;
 }
 body{
-  background: #414141
+  background: #212121
 }
 .color-txt{
   color: white;
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }
