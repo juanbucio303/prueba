@@ -201,9 +201,6 @@ body{
   border-radius: 50%;
   border: solid 2px white;
 }
-.text-dang{
-  color:#C70038;
-}
 .hov{
 
 }
@@ -212,4 +209,7 @@ body{
 }
 .btnh:hover{
   background: #212121;
+}
+.text-dang{
+  color:#C70038;
 }
