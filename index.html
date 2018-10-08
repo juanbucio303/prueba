@@ -15,12 +15,33 @@
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/fontawesome-all.js" charset="utf-8"></script>
     <script src="js/parallax.js" charset="utf-8"></script>
+    <script src="js/scrollreveal.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $('.carousel').carousel();
         // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
+        $('#inf2').hide();
+        $("#btn-atras").hide();
+
         $('.parallax-window').parallax({
-          imageSrc: 'img/perritos2.jpg'
+          imageSrc: 'img/huellas2.png'
+        });
+        $('#btn-inf').click(function(){
+          $("#inf1").hide();
+          $("#inf2").show();
+          $("#btn-inf").hide();
+          $("#btn-atras").show();
+          window.sr = ScrollReveal();
+          sr.reveal('#inf2', {
+            duration: 3000,
+            origin: 'left'
+          });
+        });
+        $('#btn-atras').click(function(){
+          $("#inf1").show();
+          $("#inf2").hide();
+          $("#btn-atras").hide();
+          $("#btn-inf").show();
         });
       });
       // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
@@ -32,6 +53,14 @@
       offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
       callback: function ( anchor, toggle ) {} // Function to run after scrolling
       });
+
+      // window.sr = ScrollReveal();
+      //
+      // sr.reveal('.navbar', {
+      //   duration: 2000,
+      //   origin: 'bottom'
+      // });
+
     </script>
   </head>
   <body>
@@ -74,166 +103,262 @@
     </nav>
 <!--/.Navbar-->
 
+<!-- Modal -->
+<!-- Button trigger modal -->
+
 <div class="container-fluid">
+  <section id="sec-1" >
+    <!--Carousel Wrapper-->
+    <div id="carousel-with-lb" class="carousel slide carousel-multi-item d-none d-lg-block" data-ride="carousel">
+      <!--Controls-->
+      <!-- <div class="controls-top">
+      <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div> -->
+    <!--/.Controls-->
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-with-lb" data-slide-to="0" class="active secondary-color "></li>
+      <!-- <li data-target="#carousel-with-lb" data-slide-to="1" class="active secondary-color "></li> -->
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides and lightbox-->
+    <div class="carousel-inner mdb-lightbox sinpadding" role="listbox">
+      <div id="mdb-lightbox-ui"></div>
+      <!--First slide-->
+      <div class=" carousel-item active text-center " >
+        <figure data-toggle="modal" data-target="#exampleModal12" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <img src="img/perritos1.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal1" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg" class="img-fluid"> -->
+            <img src="img/perritos2.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal2" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(6).jpg" class="img-fluid"> -->
+            <img src="img/perritos3.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal3" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="img-fluid"> -->
+            <img src="img/perritos4.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal4" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(12).jpg" class="img-fluid"> -->
+            <img src="img/perritos5.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal5" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros23.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-6 col-6 col-sm-6 col-lg-6 d-md-inline-block" style="margin-left:21px; margin-right:22px">
+          <a>
+            <!-- <img src="img/ni uno mas2.png" class="img-fluid"> -->
+            <h1 class="font3" style="font-size:350%" ><a class="text-white">Ni </a><a class="text-dang">uno </a><a class="text-white">mas </a><a class="text-dang">en </a><a class="text-white">la</a><a class="text-dang"> calle</a></h1>
+            <!-- <img src="img/blanco.png" class="img-fluid" > -->
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal6" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perritos7.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal7" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros13.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal8" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perritos9.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal9" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros10.jpg" class="img-fluid" >
+
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal10" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros11.jpg" class="img-fluid" >
+
+          </a>
+        </figure>
+        <figure data-toggle="modal" data-target="#exampleModal11" class="btn col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a>
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros12.jpg" class="img-fluid" >
+
+          </a>
+        </figure>
+      </div>
+      <!--/.First slide-->
+      <!-- <div class=" carousel-item text-center">
+      <figure class="col-md-4 d-md-inline-block">
+      <a href="img/crecimiento perros2.png" data-lightbox="estadisticas" data-title="Crecimiento">
+      <img src="img/crecimiento perros2.png" class="img-fluid">
+    </a>
+  </figure>
+  <figure class="col-md-4 d-md-inline-block text-justify">
+  <h2 class="font3 ">¿Sabes Cuantos podemos ser
+  si no nos esterelizamos?</h2>
+  <h2 class="font3 text-dang">Do you know how many of us there can be
+  if we don't get neutered?</h2>
+</figure>
+</div> -->
+
+</div>
+<!--/.Slides-->
+</div>
+<!--/.Carousel Wrapper-->
+</section>
+
    <section class="pading">
-     <div class="parallax-window" data-parallax="scroll" data-image-src="img/perritos2.jpg">
-     <!-- Grid row -->
-     <div class="row">
-         <!-- Grid column -->
-         <div class="offset-md-6 offset-lg-7 col-md-6 col-lg-5">
 
-             <!--Card-->
-             <div class="card " style="background:#CD1A4C">
+     <div class="parallax-window" data-parallax="scroll" data-image-src="img/n4.jpg">
 
-                 <!--Card image-->
-                 <div class="view">
-                     <img src="img/crecimiento perros.png" class="card-img-top" alt="photo">
-                     <a href="#">
-                         <div class="mask rgba-white-slight"></div>
-                     </a>
-                 </div>
-
-                 <!--Card content-->
-                 <div class="card-body text-center">
-                     <!--Title-->
-                     <h4 class="card-title white-text"><h3 class="font3">¿CUÁL ES LA IMPORTANCIA?</h3><h3 class="font3 white-text">WHY IS IT IMPORTANT?</h3></h4>
-                     <!--Text-->
-                     <p class="card-text white-text">.</p>
-                     <a href="#" class="btn btn-outline-white btn-md waves-effect">Ver más</a>
-                 </div>
-
-             </div>
-             <!--/.Card-->
-
+       <div class="row" style="padding-top:30px">
+         <!-- <div class="row">
+            <div class="col-md-12">
+                <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+                    <div class="text-white text-center py-5 px-4 my-5">
+                        <div>
+                            <h1 class="card-title pt-3 mb-5 font-bold"><strong>Create your beautiful website with MDBootstrap</strong></h1>
+                            <p class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat,
+                                laboriosam, voluptatem, optio vero odio nam sit officia accusamus
+                                minus error nisi architecto nulla ipsum dignissimos. Odit sed qui,
+                                dolorum!.</p>
+                            <a class="btn btn-outline-white btn-rounded"><i class="fa fa-clone left"></i> View project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+          <div class="col-md-4 col-sm-4 col-4">
+            <!-- <div class="hov">
+              <button type="button" class="btn btn-outline-light btnh">Conoce más</button>
+            </div> -->
+            <!-- <div class="row">
+              <div class="col-md-12 text-center">
+                <h2 class="font3 text-dang">¿Cuál es la importancia?</h2>
+                <div class="text-justify">
+                  <h5 class="font3 text-white">
+                    Esterilizar es amarlos protegernos y eliminar el sufrimiento de millones de perros no deseados que acaban en las calles maltratados con hambre frío y en una soledad muy dolorosa
+                    en Valle de Bravo y San Miguel de Allende hay aproximadamente 30,000 perros en esta situación.
+                  </h5>
+                  <h4 class="font3 text-white">No los Compres.</h4>
+                </div>
+              </div>
+            </div> -->
+          </div>
+         <div class="col-md-4 col-sm-4 col-4">
+           <div class="col-md-12 col-sm-4 col-4">
+             <!-- <img src="img/crecimiento perros.png" class="card-img-top" style="border-radius:100%;" alt="photo" width="100%"> -->
+           </div>
+           <div class="card card-image text-white text-justify" style="background:#212121">
+           </div>
          </div>
-         <!-- Grid column -->
+         <div class="col-md-4 col-sm-4 col-12">
+          <div class="row">
+            <div class="col-md-11 col-12 text-center">
+              <h2 class="font3 text-white">¿Cuál es la importancia?</h2>
+              <div class="text-justify">
+                <h5 class="font3 text-dang">
+                  Esterilizar es amarlos protegernos y eliminar el sufrimiento de millones de perros no deseados que acaban en las calles maltratados con hambre frío y en una soledad muy dolorosa
+                  en Valle de Bravo y San Miguel de Allende hay aproximadamente 30,000 perros en esta situación.
+                </h5>
+                <!-- <h4 class="font3 text-white">No los Compres.</h4> -->
+              </div>
+              <h2 class="font3 text-dang" >Why is it important?</h2>
+              <div class="text-justify">
+                <h5 class="font3 text-white">
+                  To neuter is to love, protect, and eliminate suffering of millons of unwanted dogs which en up in the streets, mistreated, hungry,
+                  cold, and in very painful loneliness.
+                  Approximately 30,000 dogs in Valle de Bravo and San Miguel de Allende are in this situation.
+                </h5>
+              </div>
+            </div>
+          </div>
+         </div>
 
-     </div>
-     <!-- Grid row -->
+
+         <!-- <div class="col-md-8">
+           <div class="row">
+             <div class="col-md-7">
+               <h2 class="font3 text-dang">¿Cuál es la importancia?</h2>
+             </div>
+             <div class="col-md-5">
+               <h2 class="font3 text-white">Why is it important?</h2>
+             </div>
+           </div>
+           <div class="row text-justify">
+             <div class="col-md-6">
+               <h5 class="font3 text-white">
+                 Esterilizar es amarlos protegernos y eliminar el sufrimiento de millones de perros no deseados que acaban en las calles maltratados con hambre frío y en una soledad muy dolorosa
+                 en Valle de Bravo y San Miguel de Allende hay aproximadamente 30000 perros en esta situación.
+               </h5>
+             </div>
+             <div class="col-md-6">
+               <h5 class="font3 text-dang">
+                 To neuter is to love, protect, and eliminate suffering of millons of unwanted dogs which en up in the streets, mistreated, hungry,
+                 cold, and in very painful loneliness.
+                 Approximately 30,000 dogs in Valle de Bravo and San Miguel de Allende are in this situation.
+               </h5>
+             </div>
+           </div>
+         </div> -->
+         <!-- <div class="col-md-4">
+           <div class="row">
+             <div style="margin:1%" class="col-md-12">
+               <h4 class="font3 text-white">No los Compres. <a class="text-dang" style="margin:10%">Don't buy dogs</a></h4>
+             </div>
+           </div>
+           <div class="row text-justify">
+             <div class="col-md-6">
+               <h6 class="font3 text-dang">Adoptalo, esterilízalo, edúcalo, vacúnalo y sobre todo NUNCA lo abandones.</h6>
+             </div>
+             <div class="col-md-6">
+               <h6 style="margin:2.5%" class="font3 text-white">Adopt, neuter, educate, vaccinate, and above all NEVER abandon them.</h6>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-4">
+           <h5 class="font3 text-white">
+             La esterilización solución, un acto de humanidad y un procedimiento quirúrgico rutinario rápido indoloro con un tiempo de recuperación sorprendente.
+           </h5>
+         </div>
+         <div class="col-md-4">
+           <h5 class="font3 text-dang">
+             Neutering is a solution, a humane act and a routine medical procedure that is quick, painless, and with a suprisingly short
+             recovery time.
+           </h5>
+         </div> -->
+         <!-- <div class="col-md-4"> -->
+         <!-- <img src="img/crecimiento perros.png" class="card-img-top" alt="photo" height="100%"> -->
+         <!-- </div> -->
+
+         <!-- <div class="parallax-window col-md-4" data-parallax="scroll" data-image-src="img/perritos2.jpg"></div> -->
+
+       </div>
      </div>
    </section>
-    <section id="sec-1">
-      <!--Carousel Wrapper-->
-      <div id="carousel-with-lb" class="carousel slide carousel-multi-item d-none d-lg-block" data-ride="carousel">
-        <!--Controls-->
-        <!-- <div class="controls-top">
-          <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-          <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-        </div> -->
-        <!--/.Controls-->
-        <!--Indicators-->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-with-lb" data-slide-to="0" class="active secondary-color "></li>
-          <!-- <li data-target="#carousel-with-lb" data-slide-to="1" class="active secondary-color "></li> -->
-        </ol>
-        <!--/.Indicators-->
-        <!--Slides and lightbox-->
-        <div class="carousel-inner mdb-lightbox sinpadding" role="listbox">
-          <div id="mdb-lightbox-ui"></div>
-          <!--First slide-->
-          <div class=" carousel-item active text-center " >
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perritos1.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <img src="img/perritos1.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perritos2.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg" class="img-fluid"> -->
-                <img src="img/perritos2.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perritos3.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(6).jpg" class="img-fluid"> -->
-                <img src="img/perritos3.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perritos4.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="img-fluid"> -->
-                <img src="img/perritos4.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perritos5.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(12).jpg" class="img-fluid"> -->
-                <img src="img/perritos5.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perritos6.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
-                <img src="img/perritos6.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-6 col-6 col-sm-6 col-lg-6 d-md-inline-block" >
-              <a href="img/perritos1.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-              <img src="img/ni uno mas2.png" class="img-fluid" >
-              <!-- <h1 class="font3 " >Ni uno mas en la calle</h1> -->
-                <img src="img/blanco.png" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perritos7.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
-                <img src="img/perritos7.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perros13.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
-                <img src="img/perros13.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perritos9.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
-                <img src="img/perritos9.jpg" class="img-fluid" >
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perros10.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
-                <img src="img/perros10.jpg" class="img-fluid" >
-
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perros11.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
-                <img src="img/perros11.jpg" class="img-fluid" >
-
-              </a>
-            </figure>
-            <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
-              <a href="img/perros12.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
-                <img src="img/perros12.jpg" class="img-fluid" >
-
-              </a>
-            </figure>
-          </div>
-          <!--/.First slide-->
-          <!-- <div class=" carousel-item text-center">
-            <figure class="col-md-4 d-md-inline-block">
-              <a href="img/crecimiento perros2.png" data-lightbox="estadisticas" data-title="Crecimiento">
-                <img src="img/crecimiento perros2.png" class="img-fluid">
-              </a>
-          </figure>
-          <figure class="col-md-4 d-md-inline-block text-justify">
-              <h2 class="font3 ">¿Sabes Cuantos podemos ser
-              si no nos esterelizamos?</h2>
-              <h2 class="font3 text-danger">Do you know how many of us there can be
-              if we don't get neutered?</h2>
-          </figure>
-          </div> -->
-
-        </div>
-        <!--/.Slides-->
-      </div>
-      <!--/.Carousel Wrapper-->
-    </section>
 
     <section class="testimonial color-txt" id="sec-2" style="background:#414141">
       <div class="container">
@@ -242,8 +367,6 @@
     </section>
     <section>
       <div class="container">
-
-
       <div class="row">
         <div class="col-md-12">
           <div id="mdb-lightbox-ui"></div>
@@ -268,11 +391,11 @@
                     <p class="card-text ">
                       <h2 class="font color-txt">Jerry O'Conell</h2>
                     </p>
-                    <p class="card-text  "> <h4 class="text-danger font3">Dogs are the only mammals that will actually
+                    <p class="card-text  "> <h4 class="text-dang font3">Dogs are the only mammals that will actually
                         stare and look into human's eyes.</h4>
                     </p>
                     <p class="card-text ">
-                      <h2 class="text-danger font">Jerry O'Conell</h2>
+                      <h2 class="text-dang font">Jerry O'Conell</h2>
                     </p>
                   </div>
                   <div class=" d-lg-none d-print-block">
@@ -282,26 +405,27 @@
                     <p class="card-text ">
                       <h5 class="font text-white">Jerry O'Conell</h5>
                     </p>
-                    <p class="card-text  "> <h6 class="text-danger font3">Dogs are the only mammals that will actually
+                    <p class="card-text  "> <h6 class="text-dang font3">Dogs are the only mammals that will actually
                         stare and look into human's eyes.</h6>
                     </p>
                     <p class="card-text ">
-                      <h5 class="text-danger font">Jerry O'Conell</h5>
+                      <h5 class="text-dang font">Jerry O'Conell</h5>
                     </p>
                   </div>
 
                 </div>
+
                 <div class="card-body back text-justify">
                   <div class="d-none d-lg-block d-print-block">
                     <p class="card-text "><h4 class="font3 color-txt">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS CALLEJEROS.</h4>
-                      <h4 class="font3 text-danger">Falso: </h4><h3 class="font4 color-txt">La fábrica de perros, está en las casas de dueños que no
+                      <h4 class="font3 text-dang">Falso: </h4><h3 class="font4 color-txt">La fábrica de perros, está en las casas de dueños que no
                       esterilizan a sus animales. Muchos dueños permiten que sus animales
                       salgan de casa solos y es ahí cuando frecuentemente se cruzan.</h3>
                     </p>
                   </div>
                   <div class=" d-lg-none d-print-block">
                     <p class="card-text "><h5 class="font3 color-txt">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS CALLEJEROS.</h5>
-                      <h6 class="font3 text-danger">Falso: </h5><h6 class="font3 color-txt">La fábrica de perros, está en las casas de dueños que no
+                      <h6 class="font3 text-dang">Falso: </h5><h6 class="font3 color-txt">La fábrica de perros, está en las casas de dueños que no
                       esterilizan a sus animales. Muchos dueños permiten que sus animales
                       salgan de casa solos y es ahí cuando frecuentemente se cruzan.</h6>
                     </p>
@@ -309,7 +433,7 @@
                   <!-- <h4 class="card-title"><a>Card title</a></h4> -->
 
 
-                  <!-- <p class="card-text  "> <h2 class="text-danger font3">Dogs are the only mammals that will actually
+                  <!-- <p class="card-text  "> <h2 class="text-dang font3">Dogs are the only mammals that will actually
                       stare and look into human's eyes.</h2>
                   </p> -->
 
@@ -326,10 +450,10 @@
                     <p class="card-text">
                       <h2 class="font color-txt">Marilyn Monroe</h2>
                     </p>
-                    <p class="card-text  "> <h4 class="text-danger font3">Dogs never bite me. Just humans.</h4>
+                    <p class="card-text  "> <h4 class="text-dang font3">Dogs never bite me. Just humans.</h4>
                     </p>
                     <p class="card-text ">
-                      <h2 class="text-danger font">Marilyn Monroe</h2>
+                      <h2 class="text-dang font">Marilyn Monroe</h2>
                     </p>
                   </div>
                   <div class=" d-lg-none d-print-block">
@@ -340,10 +464,10 @@
                     <p class="card-text">
                       <h5 class="font color-txt">Marilyn Monroe</h5>
                     </p>
-                    <p class="card-text  "> <h6 class="text-danger font3">Dogs never bite me. Just humans</h6>
+                    <p class="card-text  "> <h6 class="text-dang font3">Dogs never bite me. Just humans</h6>
                     </p>
                     <p class="card-text ">
-                      <h5 class="text-danger font">Marilyn Monroe</h5>
+                      <h5 class="text-dang font">Marilyn Monroe</h5>
                     </p>
                   </div>
                 </div>
@@ -374,11 +498,11 @@
                       <p class="card-text">
                         <h2 class="font color-txt">Albert Schweitzer</h2>
                       </p>
-                      <p class="card-text  "> <h4 class="text-danger font3">Until he estends his circle of compassion to
+                      <p class="card-text  "> <h4 class="text-dang font3">Until he estends his circle of compassion to
                         include all living things, man will not himself.</h4>
                       </p>
                       <p class="card-text ">
-                        <h2 class="text-danger font">Albert Schweitzer</h2>
+                        <h2 class="text-dang font">Albert Schweitzer</h2>
                       </p>
                     </div>
                     <div class=" d-lg-none d-print-block">
@@ -389,31 +513,31 @@
                     <p class="card-text">
                       <h5 class="font color-txt">Albert Schweitzer</h5>
                     </p>
-                    <p class="card-text  "> <h6 class="text-danger font3">Until he estends his circle of compassion to
+                    <p class="card-text  "> <h6 class="text-dang font3">Until he estends his circle of compassion to
                       include all living things, man will not himself.</h6>
                     </p>
                     <p class="card-text ">
-                      <h5 class="text-danger font">Albert Schweitzer</h5>
+                      <h5 class="text-dang font">Albert Schweitzer</h5>
                     </p>
                     </div>
                   </div>
                   <div class="card-body back text-justify">
                       <div class="d-none d-lg-block d-print-block">
                         <p class="card-text "><h4 class="font3 color-txt">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h4>
-                          <h4 class="font3 text-danger">VERDAD A MEDIAS: </h4><h5 class="font4 color-txt">al ser esterilizados, la actividad sexual
+                          <h4 class="font3 text-dang">VERDAD A MEDIAS: </h4><h5 class="font4 color-txt">al ser esterilizados, la actividad sexual
                             se reduce drasticamente y su organismo debe gastar menos energía.</h5>
                             <br>
-                            <h4 class="font3 text-danger">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h4>
-                            <h4 class="font3 color-txt">PARTLY TRUE: </h4><h5 class="font4 text-danger">When they are neutered, sexual activity
+                            <h4 class="font3 text-dang">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h4>
+                            <h4 class="font3 color-txt">PARTLY TRUE: </h4><h5 class="font4 text-dang">When they are neutered, sexual activity
                               decreases drastically and their organism uses less energy.</h5>
                             </p>
                       </div>
                       <div class=" d-lg-none d-print-block">
                         <p class="card-text "><h6 class="font3 color-txt">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h6>
-                          <h6 class="font4 color-txt"><a class="text-danger">VERDAD A MEDIAS:</a> al ser esterilizados, la actividad sexual
+                          <h6 class="font4 color-txt"><a class="text-dang">VERDAD A MEDIAS:</a> al ser esterilizados, la actividad sexual
                             se reduce drasticamente y su organismo debe gastar menos energía.</h6>
-                            <h6 class="font3 text-danger">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h6>
-                            <h6 class="font4 "><a class="text-white">PARTLY TRUE:</a><a class="text-danger">When they are neutered, sexual activity
+                            <h6 class="font3 text-dang">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h6>
+                            <h6 class="font4 "><a class="text-white">PARTLY TRUE:</a><a class="text-dang">When they are neutered, sexual activity
                               decreases drastically and their organism uses less energy.</a></h6>
                             </p>
                       </div>
@@ -431,12 +555,12 @@
                       <h2 class="font color-txt">Abraham Lincoln</h2>
                     </p>
                     <p class="card-text">
-                      <h4 class="text-danger font3">
+                      <h4 class="text-dang font3">
                         I care not much for a man's religion whose dog and cat are not the better for it.
                       </h4>
                     </p>
                     <p class="card-text ">
-                      <h2 class="text-danger font">Abraham Lincoln</h2>
+                      <h2 class="text-dang font">Abraham Lincoln</h2>
                     </p>
                   </div>
                   <div class=" d-lg-none d-print-block">
@@ -449,12 +573,12 @@
                       <h5 class="font color-txt">Abraham Lincoln</h5>
                     </p>
                     <p class="card-text">
-                      <h6 class="text-danger font3">
+                      <h6 class="text-dang font3">
                         I care not much for a man's religion whose dog and cat are not the better for it.
                       </h6>
                     </p>
                     <p class="card-text ">
-                      <h5 class="text-danger font">Abraham Lincoln</h5>
+                      <h5 class="text-dang font">Abraham Lincoln</h5>
                     </p>
                   </div>
                 </div>
@@ -485,11 +609,11 @@
                       <p class="card-text">
                         <h2 class="fon color-txt">Robert Benchley</h2>
                       </p>
-                      <p class="card-text  "> <h4 class="text-danger font3">A dog teaches a boy fidelity, perseverance, and
+                      <p class="card-text  "> <h4 class="text-dang font3">A dog teaches a boy fidelity, perseverance, and
                         to turn around three times before lying down.</h4>
                       </p>
                       <p class="card-text ">
-                        <h2 class="text-danger font">Robert Benchley</h2>
+                        <h2 class="text-dang font">Robert Benchley</h2>
                       </p>
                     </div>
                     <div class=" d-lg-none d-print-block">
@@ -500,11 +624,11 @@
                       <p class="card-text">
                         <h5 class="font color-txt">Robert Benchley</h5>
                       </p>
-                      <p class="card-text  "> <h6 class="text-danger font3">A dog teaches a boy fidelity, perseverance, and
+                      <p class="card-text  "> <h6 class="text-dang font3">A dog teaches a boy fidelity, perseverance, and
                         to turn around three times before lying down.</h6>
                       </p>
                       <p class="card-text ">
-                        <h5 class="text-danger font">Robert Benchley</h5>
+                        <h5 class="text-dang font">Robert Benchley</h5>
                       </p>
                     </div>
 
@@ -512,23 +636,23 @@
                   <div class="card-body back text-justify">
                       <div class="d-none d-lg-block d-print-block">
                         <p class="card-text "><h4 class="font3 color-txt" >LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h4>
-                          <h4 class="font3 text-danger">FALSO: </h4><h5 class="font4 color-txt">La esterilización animal es una de las intervenciones
+                          <h4 class="font3 text-dang">FALSO: </h4><h5 class="font4 color-txt">La esterilización animal es una de las intervenciones
                             más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
                             las clínicas del mundo.</h5>
 
-                          <h4 class="font3 text-danger">NEUTERING SURGERIES ARE VERY RISKY.</h4>
-                          <h4 class="font3 color-txt">FALSE: </h4><h5 class="font4 text-danger">The sugery to neuter an animal is one of the simplest and faster
+                          <h4 class="font3 text-dang">NEUTERING SURGERIES ARE VERY RISKY.</h4>
+                          <h4 class="font3 color-txt">FALSE: </h4><h5 class="font4 text-dang">The sugery to neuter an animal is one of the simplest and faster
                             procedures done very day an whit a minimal accident rate in clinics around the world.</h5>
                         </p>
                       </div>
                       <div class=" d-lg-none d-print-block">
                         <p class="card-text "><h6 class="font3">LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h6>
-                          <h6 class="font4 "><a class="text-danger">FALSO:</a> La esterilización animal es una de las intervenciones
+                          <h6 class="font4 "><a class="text-dang">FALSO:</a> La esterilización animal es una de las intervenciones
                             más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
                             las clínicas del mundo.</h6>
 
-                          <h6 class="font3 text-danger">NEUTERING SURGERIES ARE VERY RISKY.</h6>
-                          <h6 class="font4 ">PARTLY TRUE: <a class="text-danger">The sugery to neuter an animal is one of the simplest and faster
+                          <h6 class="font3 text-dang">NEUTERING SURGERIES ARE VERY RISKY.</h6>
+                          <h6 class="font4 ">PARTLY TRUE: <a class="text-dang">The sugery to neuter an animal is one of the simplest and faster
                             procedures done very day an whit a minimal accident rate in clinics around the world.</a></h6>
                         </p>
                       </div>
@@ -544,13 +668,13 @@
                     <p class="card-text">
                       <h2 class="font color-txt">Mark Twain</h2>
                     </p>
-                    <p class="card-text  "> <h4 class="text-danger font3">If you pick up a starving dog and make him
+                    <p class="card-text  "> <h4 class="text-dang font3">If you pick up a starving dog and make him
                       prosperous, he will not bite you. This is the
                       principal difference between a dog and a man.
                     </h4>
                     </p>
                     <p class="card-text ">
-                      <h2 class="text-danger font">Mark Twain</h2>
+                      <h2 class="text-dang font">Mark Twain</h2>
                     </p>
                   </div>
                   <div class="d-lg-none d-print-block">
@@ -561,13 +685,13 @@
                     <p class="card-text">
                       <h5 class="font color-txt">Mark Twain</h5>
                     </p>
-                    <p class="card-text  "> <h6 class="text-danger font3">If you pick up a starving dog and make him
+                    <p class="card-text  "> <h6 class="text-dang font3">If you pick up a starving dog and make him
                       prosperous, he will not bite you. This is the
                       principal difference between a dog and a man.
                     </h6>
                     </p>
                     <p class="card-text ">
-                      <h5 class="text-danger font">Mark Twain</h5>
+                      <h5 class="text-dang font">Mark Twain</h5>
                     </p>
                   </div>
 
@@ -599,11 +723,11 @@
                       <p class="card-text">
                         <h2 class="font color-txt">Eduardo Lamazón</h2>
                       </p>
-                      <p class="card-text  "> <h4 class="text-danger font3">It is shameful for our species that, being the dog
+                      <p class="card-text  "> <h4 class="text-dang font3">It is shameful for our species that, being the dog
                         man's best friend, men are dogs' worst enemies.</h4>
                       </p>
                       <p class="card-text ">
-                        <h2 class="text-danger font">Eduardo Lamazón</h2>
+                        <h2 class="text-dang font">Eduardo Lamazón</h2>
                       </p>
                     </div>
                     <div class="d-lg-none d-print-block">
@@ -614,32 +738,31 @@
                       <p class="card-text">
                         <h5 class="font color-txt">Eduardo Lamazón</h5>
                       </p>
-                      <p class="card-text  "> <h6 class="text-danger font3">It is shameful for our species that, being the dog
+                      <p class="card-text  "> <h6 class="text-dang font3">It is shameful for our species that, being the dog
                         man's best friend, men are dogs' worst enemies.</h6>
                       </p>
                       <p class="card-text ">
-                        <h5 class="text-danger font">Eduardo Lamazón</h5>
+                        <h5 class="text-dang font">Eduardo Lamazón</h5>
                       </p>
                     </div>
                   </div>
                   <div class="card-body back text-justify">
                       <div class="d-none d-lg-block d-print-block">
-                        <p class="card-text "><h4 class="font3 color-txt">LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h4>
-                          <h4 class="font3 text-danger">FALSO: </h4><h5 class="font4 color-txt">La esterilización animal es una de las intervenciones
-                            más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
-                            las clínicas del mundo.</h5>
+                        <p class="card-text "><h5 class="font3 color-txt">LA ESTERILIZACIÓN MODIFICA SU TAMAÑO Y CARACTERISTÍCAS GENÉTICAS.</h5>
+                          <h5 class="font3 text-dang">VERDAD A MEDIAS: </h5><h5 class="font4 color-txt">El tamaño que tendrá de adulto un cachorro, viene determinado
+                            genéticamente, principalmente por el padre, lo que si el padre es grande, lo más probable es que sus hijos tambien lo sean.</h5>
 
-                          <h4 class="font3 text-danger">NEUTERING SURGERIES ARE VERY RISKY.</h4>
-                          <h4 class="font3  color-txt">FALSE: </h4><h5 class="font4 text-danger">The sugery to neuter an animal is one of the simplest and faster
-                            procedures done very day an whit a minimal accident rate in clinics around the world.</h5>
+                          <h5 class="font3 text-dang">NEUTERING ALTERS THEIR SIZE AND GENETIC CHARACTERISTICS.</h5>
+                          <h5 class="font3  color-txt">PARTLY TRUE: </h5><h5 class="font4 text-dang">The adult size of a puppy or kitten is genetically predetermined, mainly from the father's side.
+                            If the dad is big, it is likely that the puppies will be also.</h5>
                         </p>
                       </div>
                       <div class=" d-lg-none d-print-block">
                         <p class="card-text "><h6 class="font3color-txt">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h6>
-                          <h6 class="font3 text-danger">VERDAD A MEDIAS: </h6><h6 class="font4color-txt">al ser esterilizados, la actividad sexual
+                          <h6 class="font3 text-dang">VERDAD A MEDIAS: </h6><h6 class="font4color-txt">al ser esterilizados, la actividad sexual
                             se reduce drasticamente y su organismo debe gastar menos energía.</h6>
-                          <h6 class="font3 text-danger">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h6>
-                          <h6 class="font3 color-txt">PARTLY TRUE: </h6><h6 class="font4 text-danger">When they are neutered, sexual activity
+                          <h6 class="font3 text-dang">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h6>
+                          <h6 class="font3 color-txt">PARTLY TRUE: </h6><h6 class="font4 text-dang">When they are neutered, sexual activity
                             decreases drastically and their organism uses less energy.</h6>
                         </p>
                       </div>
@@ -656,12 +779,12 @@
                     <p class="card-text">
                       <h2 class="font color-txt">Gandhi</h2>
                     </p>
-                    <p class="card-text  "> <h4 class="text-danger font3">It is shameful for our species that, being the dog
+                    <p class="card-text  "> <h4 class="text-dang font3">It is shameful for our species that, being the dog
                       man's best friend, men are dogs' worst enemies.
                     </h4>
                     </p>
                     <p class="card-text ">
-                      <h2 class="text-danger font">Gandhi</h2>
+                      <h2 class="text-dang font">Gandhi</h2>
                     </p>
                   </div>
                   <div class="d-lg-none d-print-block">
@@ -672,12 +795,12 @@
                     <p class="card-text">
                       <h5 class="font color-txt">Gandhi</h5>
                     </p>
-                    <p class="card-text  "> <h6 class="text-danger font3">It is shameful for our species that, being the dog
+                    <p class="card-text  "> <h6 class="text-dang font3">It is shameful for our species that, being the dog
                       man's best friend, men are dogs' worst enemies.
                     </h6>
                     </p>
                     <p class="card-text ">
-                      <h5 class="text-danger font">Gandhi</h5>
+                      <h5 class="text-dang font">Gandhi</h5>
                     </p>
                   </div>
 
@@ -696,11 +819,28 @@
       </div>
     </div>
     </section>
+    <div class="row wow fadeIn">
+      <!--Grid column-->
+      <!--Grid column-->
+    </div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/n5.jpg">
+      <div class="col-md-6 mb-4 white-text wow fadeIn">
+        <!-- <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">Creative Agency</h3> -->
+        <h3 class="font3 text-white text-center">LOS PROCEDIMIENTOS SON MUY CAROS</h3>
+        <hr class="hr-light my-4 w-100">
+        <h4 class="font3 text-dang">VERDAD A MEDIAS:</h4>
+        <h6 class="font3 text-white">Existen instituciones gubernamentales que ofrecen un servicio gratuito y el costo
+        privado varía de médico a médico.</h6>
+        <h4 class="font3 text-dang">Es aquí, donde <b class="font3">AYUDOG</b> toma importancia.</h4><h6 class="font3 text-white">tu aportación ayudará a costear los gastos
+        médicos básicos, ayudándonos a alcanzar nuestra meta de esterilizar 1,500 perros en esta primera etapa</h6>
+        <!-- <h4 class="subtext-header mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit deleniti consequuntur nihil.</h4> -->
+      </div>
 
+    </div>
     <section class="testimonial" id="sec-3" style="">
       <div class="container ">
         <h1 class="font3 color-txt color-txt" >Datos bancarios para donativos</h1>
-        <h1 class="font3 text-danger" >Bank information for donations</h1>
+        <h1 class="font3 text-dang" >Bank information for donations</h1>
         <div class="row">
           <div class="col-md-8 text-justify font3 color-txt color-txt">
             <h5><img src="img/banorte.png" width="40" alt="">
@@ -726,7 +866,7 @@
             </p>
           </div>
           <div class="col-md-4">
-              <img src="img/perrito1.png" alt="..." class="rounded-circle img-fluid">
+              <img src="img/donatvos.jpg"  alt="..." class="redond img-fluid">
 
           </div>
         </div>
@@ -756,5 +896,205 @@
 
       </footer>
       <!-- Footer -->
+
+      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+          </div>
+        </div>
+      </div>
   </body>
 </html>

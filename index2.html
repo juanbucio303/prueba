@@ -1,116 +1,909 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <title>Curso</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="js/popper.min.js" charset="utf-8"></script>
+    <script src="js/mdb.min.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/lightbox.js" charset="utf-8"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/fontawesome-all.js" charset="utf-8"></script>
+    <script src="js/parallax.js" charset="utf-8"></script>
+    <script src="js/scrollreveal.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.carousel').carousel();
+        // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
+        $('#inf2').hide();
+        $("#btn-atras").hide();
+
+        $('.parallax-window').parallax({
+          imageSrc: 'img/huellas2.png'
+        });
+        $('#btn-inf').click(function(){
+          $("#inf1").hide();
+          $("#inf2").show();
+          $("#btn-inf").hide();
+          $("#btn-atras").show();
+          window.sr = ScrollReveal();
+          sr.reveal('#inf2', {
+            duration: 3000,
+            origin: 'left'
+          });
+        });
+        $('#btn-atras').click(function(){
+          $("#inf1").show();
+          $("#inf2").hide();
+          $("#btn-atras").hide();
+          $("#btn-inf").show();
+        });
+      });
+      // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
+      smoothScroll.init({
+      selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+      selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+      speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+      easing: 'easeInOutCubic', // Easing pattern to use
+      offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+      callback: function ( anchor, toggle ) {} // Function to run after scrolling
+      });
+
+      // window.sr = ScrollReveal();
+      //
+      // sr.reveal('.navbar', {
+      //   duration: 2000,
+      //   origin: 'bottom'
+      // });
+    </script>
   </head>
-
   <body>
-    <!--Main Navigation-->
-    <header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-hue fixed-top">
+     <div class="container">
+      <!-- Collapse button -->
+      <a class="navbar-brand px-lg-4 mr-0 d-lg-none" href="#">
+        <img src="img/logo2.png" height="70" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse justify-content-center font-weight-bold" id="basicExampleNav">
+        <!-- Links -->
+        <ul class="navbar-nav">
+         <li class="nav-item">
+          <a class="nav-link" data-scroll href="#sec-4">Contactanos</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" data-scroll href="#sec-3">Donativos</a>
+         </li>
+        </ul>
+        <!-- Links -->
+        <!-- Navbar brand -->
+        <a class="navbar-brand px-lg-4 mr-0 d-none d-lg-block" data-scroll href="#sec-1">
+         <img src="img/logo2.png" height="70" alt="">
+        </a>
+        <!-- Links -->
+        <ul class="navbar-nav">
+         <li class="nav-item">
+          <a class="nav-link" data-scroll href="#sec-2">Mitos, Mentiras y Verdades</a>
+         </li>
 
-        <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2844%29.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-            <div class="mask rgba-white-light">
-                <div class="container flex-center text-center">
-                  <div class="row mt-5">
-                    <div class="col-md-12 wow fadeIn mb-3">
-                      <h1 class="display-3 mb-2 wow fadeInDown" data-wow-delay="0.3s">NATALIE <a class="indigo-text font-weight-bold">SMITH</a></h1>
-                      <h5 class="text-uppercase mb-3 mt-1 font-weight-bold wow fadeIn" data-wow-delay="0.4s">Web developer & graphic designer</h5>
-                      <a class="btn btn-light-blue btn-lg wow fadeIn" data-wow-delay="0.4s">portfolio</a> <a class="btn btn-indigo btn-lg wow fadeIn" data-wow-delay="0.4s">About me</a>
+        </ul>
+        <!-- Links -->
+       </div>
+    </nav>
+<!--/.Navbar-->
+<div class="container-fluid">
+  <section id="sec-1" >
+    <!--Carousel Wrapper-->
+    <div id="carousel-with-lb" class="carousel slide carousel-multi-item d-none d-lg-block" data-ride="carousel">
+      <!--Controls-->
+      <!-- <div class="controls-top">
+      <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div> -->
+    <!--/.Controls-->
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-with-lb" data-slide-to="0" class="active secondary-color "></li>
+      <!-- <li data-target="#carousel-with-lb" data-slide-to="1" class="active secondary-color "></li> -->
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides and lightbox-->
+    <div class="carousel-inner mdb-lightbox sinpadding" role="listbox">
+      <div id="mdb-lightbox-ui"></div>
+      <!--First slide-->
+      <div class=" carousel-item active text-center " >
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perritos1.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <img src="img/perritos1.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perritos2.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg" class="img-fluid"> -->
+            <img src="img/perritos2.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perritos3.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(6).jpg" class="img-fluid"> -->
+            <img src="img/perritos3.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perritos4.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="img-fluid"> -->
+            <img src="img/perritos4.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perritos5.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(12).jpg" class="img-fluid"> -->
+            <img src="img/perritos5.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perros23.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros23.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-6 col-6 col-sm-6 col-lg-6 d-md-inline-block" >
+          <a href="img/perritos1.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <img src="img/ni uno mas2.png" class="img-fluid" >
+            <!-- <h1 class="font3" style="font-size:350%" ><a class="text-white">Ni </a><a class="text-dang">uno </a><a class="text-white">mas </a><a class="text-dang">en </a><a class="text-white">la</a><a class="text-dang"> calle</a> </h1> -->
+            <img src="img/blanco.png" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perritos7.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perritos7.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perros13.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros13.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perritos9.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perritos9.jpg" class="img-fluid" >
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perros10.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros10.jpg" class="img-fluid" >
+
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perros11.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros11.jpg" class="img-fluid" >
+
+          </a>
+        </figure>
+        <figure class="col-md-2 col-2 col-sm-2 col-lg-2 d-md-inline-block view overlay zoom">
+          <a href="img/perros12.jpg" data-lightbox="Ni uno mas" data-title="Ni uno mas en la calle">
+            <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid"> -->
+            <img src="img/perros12.jpg" class="img-fluid" >
+
+          </a>
+        </figure>
+      </div>
+      <!--/.First slide-->
+      <!-- <div class=" carousel-item text-center">
+      <figure class="col-md-4 d-md-inline-block">
+      <a href="img/crecimiento perros2.png" data-lightbox="estadisticas" data-title="Crecimiento">
+      <img src="img/crecimiento perros2.png" class="img-fluid">
+    </a>
+  </figure>
+  <figure class="col-md-4 d-md-inline-block text-justify">
+  <h2 class="font3 ">¿Sabes Cuantos podemos ser
+  si no nos esterelizamos?</h2>
+  <h2 class="font3 text-dang">Do you know how many of us there can be
+  if we don't get neutered?</h2>
+</figure>
+</div> -->
+
+</div>
+<!--/.Slides-->
+</div>
+<!--/.Carousel Wrapper-->
+</section>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+   <section class="pading">
+
+     <div class="parallax-window" data-parallax="scroll" data-image-src="img/n4.jpg">
+
+       <div class="row" style="padding-top:30px">
+         <!-- <div class="row">
+            <div class="col-md-12">
+                <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+                    <div class="text-white text-center py-5 px-4 my-5">
+                        <div>
+                            <h1 class="card-title pt-3 mb-5 font-bold"><strong>Create your beautiful website with MDBootstrap</strong></h1>
+                            <p class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat,
+                                laboriosam, voluptatem, optio vero odio nam sit officia accusamus
+                                minus error nisi architecto nulla ipsum dignissimos. Odit sed qui,
+                                dolorum!.</p>
+                            <a class="btn btn-outline-white btn-rounded"><i class="fa fa-clone left"></i> View project</a>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
+        </div> -->
+          <div class="col-md-4 col-sm-4 col-4">
+            <div class="hov" style="margin-top:85%; margin-left:60%">
+              <button type="button" class="btn btn-outline-light btnh">Conoce más</button>
+            </div>
+            <!-- <div class="row">
+              <div class="col-md-12 text-center">
+                <h2 class="font3 text-dang">¿Cuál es la importancia?</h2>
+                <div class="text-justify">
+                  <h5 class="font3 text-white">
+                    Esterilizar es amarlos protegernos y eliminar el sufrimiento de millones de perros no deseados que acaban en las calles maltratados con hambre frío y en una soledad muy dolorosa
+                    en Valle de Bravo y San Miguel de Allende hay aproximadamente 30,000 perros en esta situación.
+                  </h5>
+                  <h4 class="font3 text-white">No los Compres.</h4>
+                </div>
+              </div>
+            </div> -->
           </div>
+         <div class="col-md-4 col-sm-4 col-4">
+           <div class="col-md-12 col-sm-4 col-4">
+             <!-- <img src="img/crecimiento perros.png" class="card-img-top" style="border-radius:100%;" alt="photo" width="100%"> -->
+           </div>
+           <div class="card card-image text-white text-justify" style="background:#212121">
+           </div>
+         </div>
+         <div class="col-md-4 col-sm-4 col-12">
+          <div class="row">
+            <div class="col-md-11 col-12 text-center">
+              <h2 class="font3 text-white">¿Cuál es la importancia?</h2>
+              <div class="text-justify">
+                <h5 class="font3 text-dang">
+                  Esterilizar es amarlos protegernos y eliminar el sufrimiento de millones de perros no deseados que acaban en las calles maltratados con hambre frío y en una soledad muy dolorosa
+                  en Valle de Bravo y San Miguel de Allende hay aproximadamente 30,000 perros en esta situación.
+                </h5>
+                <!-- <h4 class="font3 text-white">No los Compres.</h4> -->
+              </div>
+              <h2 class="font3 text-dang" >Why is it important?</h2>
+              <div class="text-justify">
+                <h5 class="font3 text-white">
+                  To neuter is to love, protect, and eliminate suffering of millons of unwanted dogs which en up in the streets, mistreated, hungry,
+                  cold, and in very painful loneliness.
+                  Approximately 30,000 dogs in Valle de Bravo and San Miguel de Allende are in this situation.
+                </h5>
+              </div>
+            </div>
+          </div>
+         </div>
 
-          <div class="container">
 
-              <!--Grid row-->
-              <div class="row">
+         <!-- <div class="col-md-8">
+           <div class="row">
+             <div class="col-md-7">
+               <h2 class="font3 text-dang">¿Cuál es la importancia?</h2>
+             </div>
+             <div class="col-md-5">
+               <h2 class="font3 text-white">Why is it important?</h2>
+             </div>
+           </div>
+           <div class="row text-justify">
+             <div class="col-md-6">
+               <h5 class="font3 text-white">
+                 Esterilizar es amarlos protegernos y eliminar el sufrimiento de millones de perros no deseados que acaban en las calles maltratados con hambre frío y en una soledad muy dolorosa
+                 en Valle de Bravo y San Miguel de Allende hay aproximadamente 30000 perros en esta situación.
+               </h5>
+             </div>
+             <div class="col-md-6">
+               <h5 class="font3 text-dang">
+                 To neuter is to love, protect, and eliminate suffering of millons of unwanted dogs which en up in the streets, mistreated, hungry,
+                 cold, and in very painful loneliness.
+                 Approximately 30,000 dogs in Valle de Bravo and San Miguel de Allende are in this situation.
+               </h5>
+             </div>
+           </div>
+         </div> -->
+         <!-- <div class="col-md-4">
+           <div class="row">
+             <div style="margin:1%" class="col-md-12">
+               <h4 class="font3 text-white">No los Compres. <a class="text-dang" style="margin:10%">Don't buy dogs</a></h4>
+             </div>
+           </div>
+           <div class="row text-justify">
+             <div class="col-md-6">
+               <h6 class="font3 text-dang">Adoptalo, esterilízalo, edúcalo, vacúnalo y sobre todo NUNCA lo abandones.</h6>
+             </div>
+             <div class="col-md-6">
+               <h6 style="margin:2.5%" class="font3 text-white">Adopt, neuter, educate, vaccinate, and above all NEVER abandon them.</h6>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-4">
+           <h5 class="font3 text-white">
+             La esterilización solución, un acto de humanidad y un procedimiento quirúrgico rutinario rápido indoloro con un tiempo de recuperación sorprendente.
+           </h5>
+         </div>
+         <div class="col-md-4">
+           <h5 class="font3 text-dang">
+             Neutering is a solution, a humane act and a routine medical procedure that is quick, painless, and with a suprisingly short
+             recovery time.
+           </h5>
+         </div> -->
+         <!-- <div class="col-md-4"> -->
+         <!-- <img src="img/crecimiento perros.png" class="card-img-top" alt="photo" height="100%"> -->
+         <!-- </div> -->
 
-                  <!--Grid column-->
-                  <div class="col-md-12 text-center mb-3">
+         <!-- <div class="parallax-window col-md-4" data-parallax="scroll" data-image-src="img/perritos2.jpg"></div> -->
 
-                      <h1 class="font-weight-bold light-blue-text my-3">Lorem ipsum dolor sit amet, consectetur quis elit.</h1>
-                      <p align="justify">Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.</p>
+       </div>
+     </div>
+   </section>
 
+    <section class="testimonial color-txt" id="sec-2" style="background:#414141">
+      <div class="container">
+        <h1 class="font3" >Mitos, Mentiras y Verdades</h1>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="mdb-lightbox-ui"></div>
+          <div class=" row mdb-lightbox no-margin">
+            <figure class="col-md-6 view overlay zoom cardBox">
+              <div class="parallax-window" data-parallax="scroll" data-image-src="img/perros22.jpg">
+              </div>
+              <div class="card">
+                <a href="img/perros22.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                </a>
+                  <!-- <img class="card-img-top" src="img/perros22.jpg" alt="Card image cap"> -->
+                <!-- <img src="img/perros22.jpg" class="img-fluid"> -->
+              </div>
+            </figure>
+            <figure class="col-md-6 card2">
+
+                <div class="card-body front text-justify">
+
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <div class="d-none d-lg-block d-print-block">
+                    <p class="card-text"><h4 class="font3 color-txt">Los perros son los únicos mamíferos que realmente mirarán fijamente a los ojos
+                      a un ser humano.</h4>
+                    </p>
+                    <p class="card-text ">
+                      <h2 class="font color-txt">Jerry O'Conell</h2>
+                    </p>
+                    <p class="card-text  "> <h4 class="text-dang font3">Dogs are the only mammals that will actually
+                        stare and look into human's eyes.</h4>
+                    </p>
+                    <p class="card-text ">
+                      <h2 class="text-dang font">Jerry O'Conell</h2>
+                    </p>
                   </div>
-                  <!--Grid column-->
+                  <div class=" d-lg-none d-print-block">
+                    <p class="card-text "><h6 class="font3 color-txt">Los perros son los únicos mamíferos que realmente mirarán fijamente a los ojos
+                      a un ser humano.</h6>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="font text-white">Jerry O'Conell</h5>
+                    </p>
+                    <p class="card-text  "> <h6 class="text-dang font3">Dogs are the only mammals that will actually
+                        stare and look into human's eyes.</h6>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="text-dang font">Jerry O'Conell</h5>
+                    </p>
+                  </div>
 
+                </div>
+
+                <div class="card-body back text-justify">
+                  <div class="d-none d-lg-block d-print-block">
+                    <p class="card-text "><h4 class="font3 color-txt">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS CALLEJEROS.</h4>
+                      <h4 class="font3 text-dang">Falso: </h4><h3 class="font4 color-txt">La fábrica de perros, está en las casas de dueños que no
+                      esterilizan a sus animales. Muchos dueños permiten que sus animales
+                      salgan de casa solos y es ahí cuando frecuentemente se cruzan.</h3>
+                    </p>
+                  </div>
+                  <div class=" d-lg-none d-print-block">
+                    <p class="card-text "><h5 class="font3 color-txt">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS CALLEJEROS.</h5>
+                      <h6 class="font3 text-dang">Falso: </h5><h6 class="font3 color-txt">La fábrica de perros, está en las casas de dueños que no
+                      esterilizan a sus animales. Muchos dueños permiten que sus animales
+                      salgan de casa solos y es ahí cuando frecuentemente se cruzan.</h6>
+                    </p>
+                  </div>
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+
+
+                  <!-- <p class="card-text  "> <h2 class="text-dang font3">Dogs are the only mammals that will actually
+                      stare and look into human's eyes.</h2>
+                  </p> -->
+
+                </div>
+            </figure>
+            <figure class="col-md-6 ">
+                <div class="card-body front text-justify">
+                  <!-- <h4 class="card-title"><a>Card title</a></h4> -->
+                  <div class="d-none d-lg-block d-print-block">
+                      <p class="card-text "><h4 class="font3 color-txt">Los perros nunca me muerden.
+                        Sólo los seres humanos lo hacen.
+                      </h4>
+                    </p>
+                    <p class="card-text">
+                      <h2 class="font color-txt">Marilyn Monroe</h2>
+                    </p>
+                    <p class="card-text  "> <h4 class="text-dang font3">Dogs never bite me. Just humans.</h4>
+                    </p>
+                    <p class="card-text ">
+                      <h2 class="text-dang font">Marilyn Monroe</h2>
+                    </p>
+                  </div>
+                  <div class=" d-lg-none d-print-block">
+                    <p class="card-text "><h6 class="font3 color-txt">Los perros nunca me muerden.
+                      Sólo los seres humanos lo hacen.
+                    </h6>
+                    </p>
+                    <p class="card-text">
+                      <h5 class="font color-txt">Marilyn Monroe</h5>
+                    </p>
+                    <p class="card-text  "> <h6 class="text-dang font3">Dogs never bite me. Just humans</h6>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="text-dang font">Marilyn Monroe</h5>
+                    </p>
+                  </div>
+                </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom cardBox">
+              <div class="parallax-window" data-parallax="scroll" data-image-src="img/perros14.jpg">
               </div>
-              <!--Grid row-->
-
-          </div>
-
-          <div class="view jarallax intro-2" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/food2.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-              <div class="mask rgba-pink-slight">
+              <div class="card">
+                <a href="img/perros14.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <!-- <img class="card-img-top" src="img/perros14.jpg" alt="Card image cap"> -->
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
               </div>
-          </div>
-
-          <div class="view jarallax intro-2" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-              <div class="mask rgba-purple-slight">
-                  <div class="container h-100 d-flex align-items-center d-flex justify-content-center">
-                      <div class="row mt-5">
-                          <div class="col-md-12 wow fadeIn mb-3">
-                              <div class="intro-info-content text-center">
-                                  <h1 class="display-1 white-text mb-2 wow fadeInDown" data-wow-delay="0.3s">Welcome on my page!</h1>
-                                  <h4 class="mb-3 mt-1 white-text font-weight-bold wow fadeIn" data-wow-delay="0.4s">Lorem ipsum dolor sit amet</h4>
-                                  <a class="btn btn-pink wow fadeIn" data-wow-delay="0.4s">Read more</a>
-                              </div>
-                          </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom cardBox">
+              <div class="card">
+                <a href="img/perros15.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros15.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6 card2">
+                  <div class="card-body front text-justify">
+                    <div class="d-none d-lg-block d-print-block">
+                      <p class="card-text "><h4 class="font3 color-txt">Tener compasión de todos los seres vivos, es
+                        lo que hace al hombre realmente humano.
+                      </h4>
+                      </p>
+                      <p class="card-text">
+                        <h2 class="font color-txt">Albert Schweitzer</h2>
+                      </p>
+                      <p class="card-text  "> <h4 class="text-dang font3">Until he estends his circle of compassion to
+                        include all living things, man will not himself.</h4>
+                      </p>
+                      <p class="card-text ">
+                        <h2 class="text-dang font">Albert Schweitzer</h2>
+                      </p>
+                    </div>
+                    <div class=" d-lg-none d-print-block">
+                      <p class="card-text "><h6 class="font3 color-txt">Tener compasión de todos los seres vivos, es
+                        lo que hace al hombre realmente humano.
+                      </h6>
+                    </p>
+                    <p class="card-text">
+                      <h5 class="font color-txt">Albert Schweitzer</h5>
+                    </p>
+                    <p class="card-text  "> <h6 class="text-dang font3">Until he estends his circle of compassion to
+                      include all living things, man will not himself.</h6>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="text-dang font">Albert Schweitzer</h5>
+                    </p>
+                    </div>
+                  </div>
+                  <div class="card-body back text-justify">
+                      <div class="d-none d-lg-block d-print-block">
+                        <p class="card-text "><h4 class="font3 color-txt">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h4>
+                          <h4 class="font3 text-dang">VERDAD A MEDIAS: </h4><h5 class="font4 color-txt">al ser esterilizados, la actividad sexual
+                            se reduce drasticamente y su organismo debe gastar menos energía.</h5>
+                            <br>
+                            <h4 class="font3 text-dang">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h4>
+                            <h4 class="font3 color-txt">PARTLY TRUE: </h4><h5 class="font4 text-dang">When they are neutered, sexual activity
+                              decreases drastically and their organism uses less energy.</h5>
+                            </p>
+                      </div>
+                      <div class=" d-lg-none d-print-block">
+                        <p class="card-text "><h6 class="font3 color-txt">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h6>
+                          <h6 class="font4 color-txt"><a class="text-dang">VERDAD A MEDIAS:</a> al ser esterilizados, la actividad sexual
+                            se reduce drasticamente y su organismo debe gastar menos energía.</h6>
+                            <h6 class="font3 text-dang">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h6>
+                            <h6 class="font4 "><a class="text-white">PARTLY TRUE:</a><a class="text-dang">When they are neutered, sexual activity
+                              decreases drastically and their organism uses less energy.</a></h6>
+                            </p>
                       </div>
                   </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body">
+                  <div class="d-none d-lg-block d-print-block">
+                    <p class="card-text ">
+                      <h4 class="font3 color-txt">
+                        No me importa mucho la religión de hombre cuyo perro y gato no son lo mejor para el.
+                      </h4>
+                    </p>
+                    <p class="card-text">
+                      <h2 class="font color-txt">Abraham Lincoln</h2>
+                    </p>
+                    <p class="card-text">
+                      <h4 class="text-dang font3">
+                        I care not much for a man's religion whose dog and cat are not the better for it.
+                      </h4>
+                    </p>
+                    <p class="card-text ">
+                      <h2 class="text-dang font">Abraham Lincoln</h2>
+                    </p>
+                  </div>
+                  <div class=" d-lg-none d-print-block">
+                    <p class="card-text ">
+                      <h6 class="font3 color-txt">
+                        No me importa mucho la religión de hombre cuyo perro y gato no son lo mejor para el.
+                      </h6>
+                    </p>
+                    <p class="card-text">
+                      <h5 class="font color-txt">Abraham Lincoln</h5>
+                    </p>
+                    <p class="card-text">
+                      <h6 class="text-dang font3">
+                        I care not much for a man's religion whose dog and cat are not the better for it.
+                      </h6>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="text-dang font">Abraham Lincoln</h5>
+                    </p>
+                  </div>
+                </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros16.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros16.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
               </div>
-          </div>
-
-          <div class="container">
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-12 text-center my-3">
-
-                      <h1 class="font-weight-bold pink-text mb-3">Lorem ipsum dolor sit amet, consectetur quis elit.</h1>
-                      <p align="justify">Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.</p>
+            </figure>
+            <figure class="col-md-6 view overlay zoom cardBox">
+              <div class="card">
+                <a href="img/perros17.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros17.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6 card2">
+                  <div class="card-body front text-justify">
+                    <div class="d-none d-lg-block d-print-block">
+                      <p class="card-text "><h4 class="font3 color-txt">Un perro enseña a un muchacho fidelidad,
+                        perseverancia y a dar vueltas tres veces antes de acostarse.
+                      </h4>
+                      </p>
+                      <p class="card-text">
+                        <h2 class="fon color-txt">Robert Benchley</h2>
+                      </p>
+                      <p class="card-text  "> <h4 class="text-dang font3">A dog teaches a boy fidelity, perseverance, and
+                        to turn around three times before lying down.</h4>
+                      </p>
+                      <p class="card-text ">
+                        <h2 class="text-dang font">Robert Benchley</h2>
+                      </p>
+                    </div>
+                    <div class=" d-lg-none d-print-block">
+                      <p class="card-text "><h6 class="font3 color-txt">Un perro enseña a un muchacho fidelidad,
+                        perseverancia y a dar vueltas tres veces antes de acostarse.
+                      </h6>
+                      </p>
+                      <p class="card-text">
+                        <h5 class="font color-txt">Robert Benchley</h5>
+                      </p>
+                      <p class="card-text  "> <h6 class="text-dang font3">A dog teaches a boy fidelity, perseverance, and
+                        to turn around three times before lying down.</h6>
+                      </p>
+                      <p class="card-text ">
+                        <h5 class="text-dang font">Robert Benchley</h5>
+                      </p>
+                    </div>
 
                   </div>
-                  <!--Grid column-->
+                  <div class="card-body back text-justify">
+                      <div class="d-none d-lg-block d-print-block">
+                        <p class="card-text "><h4 class="font3 color-txt" >LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h4>
+                          <h4 class="font3 text-dang">FALSO: </h4><h5 class="font4 color-txt">La esterilización animal es una de las intervenciones
+                            más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
+                            las clínicas del mundo.</h5>
 
+                          <h4 class="font3 text-dang">NEUTERING SURGERIES ARE VERY RISKY.</h4>
+                          <h4 class="font3 color-txt">FALSE: </h4><h5 class="font4 text-dang">The sugery to neuter an animal is one of the simplest and faster
+                            procedures done very day an whit a minimal accident rate in clinics around the world.</h5>
+                        </p>
+                      </div>
+                      <div class=" d-lg-none d-print-block">
+                        <p class="card-text "><h6 class="font3">LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h6>
+                          <h6 class="font4 "><a class="text-dang">FALSO:</a> La esterilización animal es una de las intervenciones
+                            más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
+                            las clínicas del mundo.</h6>
+
+                          <h6 class="font3 text-dang">NEUTERING SURGERIES ARE VERY RISKY.</h6>
+                          <h6 class="font4 ">PARTLY TRUE: <a class="text-dang">The sugery to neuter an animal is one of the simplest and faster
+                            procedures done very day an whit a minimal accident rate in clinics around the world.</a></h6>
+                        </p>
+                      </div>
+                  </div>
+            </figure>
+            <figure class="col-md-6">
+                <div class="card-body text-justify">
+                  <div class="d-none d-lg-block d-print-block">
+                    <p class="card-text "><h4 class="font3 color-txt">Si recoges un perro hambriento de la calle y lo
+                      haces próspero, no te morderá; esa es la principal diferencia entre un perro y un hombre.
+                    </h4>
+                    </p>
+                    <p class="card-text">
+                      <h2 class="font color-txt">Mark Twain</h2>
+                    </p>
+                    <p class="card-text  "> <h4 class="text-dang font3">If you pick up a starving dog and make him
+                      prosperous, he will not bite you. This is the
+                      principal difference between a dog and a man.
+                    </h4>
+                    </p>
+                    <p class="card-text ">
+                      <h2 class="text-dang font">Mark Twain</h2>
+                    </p>
+                  </div>
+                  <div class="d-lg-none d-print-block">
+                    <p class="card-text "><h6 class="font3 color-txt">Si recoges un perro hambriento de la calle y lo
+                      haces próspero, no te morderá; esa es la principal diferencia entre un perro y un hombre.
+                    </h6>
+                    </p>
+                    <p class="card-text">
+                      <h5 class="font color-txt">Mark Twain</h5>
+                    </p>
+                    <p class="card-text  "> <h6 class="text-dang font3">If you pick up a starving dog and make him
+                      prosperous, he will not bite you. This is the
+                      principal difference between a dog and a man.
+                    </h6>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="text-dang font">Mark Twain</h5>
+                    </p>
+                  </div>
+
+                </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros18.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros18.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
               </div>
-              <!--Grid row-->
+            </figure>
+            <figure class="col-md-6 view overlay zoom cardBox">
+              <div class="card">
+                <a href="img/perros19.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros19.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+            <figure class="col-md-6 card2">
+                  <div class="card-body front text-justify">
+                    <div class="d-none d-lg-block d-print-block">
+                      <p class="card-text "><h4 class="font3 color-txt">Es vergonzoso para nuestra especie que, siendo el
+                        perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
+                      </h4>
+                      </p>
+                      <p class="card-text">
+                        <h2 class="font color-txt">Eduardo Lamazón</h2>
+                      </p>
+                      <p class="card-text  "> <h4 class="text-dang font3">It is shameful for our species that, being the dog
+                        man's best friend, men are dogs' worst enemies.</h4>
+                      </p>
+                      <p class="card-text ">
+                        <h2 class="text-dang font">Eduardo Lamazón</h2>
+                      </p>
+                    </div>
+                    <div class="d-lg-none d-print-block">
+                      <p class="card-text "><h6 class="font3 color-txt">Es vergonzoso para nuestra especie que, siendo el
+                        perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
+                      </h6>
+                      </p>
+                      <p class="card-text">
+                        <h5 class="font color-txt">Eduardo Lamazón</h5>
+                      </p>
+                      <p class="card-text  "> <h6 class="text-dang font3">It is shameful for our species that, being the dog
+                        man's best friend, men are dogs' worst enemies.</h6>
+                      </p>
+                      <p class="card-text ">
+                        <h5 class="text-dang font">Eduardo Lamazón</h5>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body back text-justify">
+                      <div class="d-none d-lg-block d-print-block">
+                        <p class="card-text "><h4 class="font3 color-txt">LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h4>
+                          <h4 class="font3 text-dang">FALSO: </h4><h5 class="font4 color-txt">La esterilización animal es una de las intervenciones
+                            más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
+                            las clínicas del mundo.</h5>
+
+                          <h4 class="font3 text-dang">NEUTERING SURGERIES ARE VERY RISKY.</h4>
+                          <h4 class="font3  color-txt">FALSE: </h4><h5 class="font4 text-dang">The sugery to neuter an animal is one of the simplest and faster
+                            procedures done very day an whit a minimal accident rate in clinics around the world.</h5>
+                        </p>
+                      </div>
+                      <div class=" d-lg-none d-print-block">
+                        <p class="card-text "><h6 class="font3color-txt">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h6>
+                          <h6 class="font3 text-dang">VERDAD A MEDIAS: </h6><h6 class="font4color-txt">al ser esterilizados, la actividad sexual
+                            se reduce drasticamente y su organismo debe gastar menos energía.</h6>
+                          <h6 class="font3 text-dang">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h6>
+                          <h6 class="font3 color-txt">PARTLY TRUE: </h6><h6 class="font4 text-dang">When they are neutered, sexual activity
+                            decreases drastically and their organism uses less energy.</h6>
+                        </p>
+                      </div>
+                  </div>
+            </figure>
+
+            <figure class="col-md-6">
+                <div class="card-body text-justify">
+                  <div class="d-none d-lg-block d-print-block">
+                    <p class="card-text "><h4 class="font3 color-txt">Es vergonzoso para nuestra especie que, siendo el
+                      perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
+                    </h4>
+                    </p>
+                    <p class="card-text">
+                      <h2 class="font color-txt">Gandhi</h2>
+                    </p>
+                    <p class="card-text  "> <h4 class="text-dang font3">It is shameful for our species that, being the dog
+                      man's best friend, men are dogs' worst enemies.
+                    </h4>
+                    </p>
+                    <p class="card-text ">
+                      <h2 class="text-dang font">Gandhi</h2>
+                    </p>
+                  </div>
+                  <div class="d-lg-none d-print-block">
+                    <p class="card-text "><h6 class="font3 color-txt">Es vergonzoso para nuestra especie que, siendo el
+                      perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
+                    </h6>
+                    </p>
+                    <p class="card-text">
+                      <h5 class="font color-txt">Gandhi</h5>
+                    </p>
+                    <p class="card-text  "> <h6 class="text-dang font3">It is shameful for our species that, being the dog
+                      man's best friend, men are dogs' worst enemies.
+                    </h6>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="text-dang font">Gandhi</h5>
+                    </p>
+                  </div>
+
+                </div>
+            </figure>
+            <figure class="col-md-6 view overlay zoom">
+              <div class="card">
+                <a href="img/perros20.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
+                  <img class="card-img-top" src="img/perros20.jpg" alt="Card image cap">
+                  <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
+                </a>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/n5.jpg">
+
+    </div>
+    <section class="testimonial" id="sec-3" style="">
+      <div class="container ">
+        <h1 class="font3 color-txt color-txt" >Datos bancarios para donativos</h1>
+        <h1 class="font3 text-dang" >Bank information for donations</h1>
+        <div class="row">
+          <div class="col-md-8 text-justify font3 color-txt color-txt">
+            <h5><img src="img/banorte.png" width="40" alt="">
+              LIGA VALLESANA PARA LOS DERECHOS DE LOS ANIMALES, AC
+            </h5>
+            <p>No. CUENTA: 0660 8964 69</p>
+            <p>Transferencia: CLABE 0724 5700 6608 9646 99</p>
+            <p><img src="img/svg/oxxo.svg" width="50"alt=""> No. Tarjeta: 4189 2810 4299 8006</p>
+            <p>
+
+                <form action="https://www.paypal.com/cgi-bin/websc" method="post" target="_blank">
+                  <input type="hidden" name="cmd" value="_donations">
+                  <input type="hidden" name="business" value="juanbucio303@gmail.com">
+                  <input type="hidden" name="lc" value="MX">
+                  <input type="hidden" name="item_name" value="ORGANIZACIONLIVA">
+                  <input type="hidden" name="amount" value="30.00">
+                  <input type="hidden" name="currency_code" value="MXN">
+                  <input type="hidden" name="no_note" value="0">
+                  <input type="hidden" name="bn" value="PP-DonationsBF:paypal.png:NonHostedGuest">
+                  <input type="image" src="img/paypal.png" width="200" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </p>
+          </div>
+          <div class="col-md-4">
+              <img src="img/donatvos.jpg"  alt="..." class="redond img-fluid">
 
           </div>
+        </div>
+      </div>
+    </section>
 
-    </header>
-    <!--Main Navigation-->
+    </div>
+    <!-- Footer -->
+      <footer class="page-footer font-small blue bg-hue" id="sec-4">
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script type="text/javascript">
-    $('.jarallax').jarallax({
-        speed: 0.2
-      });
-    </script>
-</body>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-5">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/logo-direc.png" width="30%" alt="">
+              <img src="img/logo-liva.png" width="15%" alt="">
+              <img src="img/logo-artum.png" width="30%" alt="">
+            </div>
+            <div class="col-md-8 "list-inline>
+              <a href="https://www.facebook.com/Ayudogmx-998884180275726" target="_blank" class="list-inline-item"><h4 class="font3"><i class="fab fa-facebook-square" id="fac"></i> /ayudogmx</h4></a>
+              <a class="list-inline-item"><h2 class="font3">|</h2></a>
+              <a href="https://www.instagram.com/ayudogmx/" target="_blank" class="list-inline-item"><h4 class="font3"><i class="fab fa-instagram" id="inst"></i> ayudogmx</h4></a></p>
+            </div>
+          </div>
+        </div>
+        <!-- Copyright -->
 
+      </footer>
+      <!-- Footer -->
+  </body>
 </html>

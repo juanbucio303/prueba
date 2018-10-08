@@ -127,7 +127,7 @@ header,
     display: block;
     /* font-size: 1.2em; */
     height: 100%;
-    padding: 0.8em;
+    padding: .8em;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -136,6 +136,7 @@ header,
 
 .card2 .back {
     transform: rotateY( 180deg);
+    padding-left: 2em;
 }
 
 
@@ -192,4 +193,23 @@ body{
 .parallax-window {
     min-height: 400px;
     background: transparent;
+}
+#sec-1{
+  padding-top: 10%;
+}
+.redond{
+  border-radius: 50%;
+  border: solid 2px white;
+}
+.text-dang{
+  color:#C70038;
+}
+.hov{
+
+}
+.btnh{
+  border-radius:22.5px;
+}
+.btnh:hover{
+  background: #212121;
 }
