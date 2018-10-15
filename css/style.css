@@ -185,7 +185,7 @@ header,
   padding-top: 10%;
 }
 body{
-  background: #212121;
+  background: #212121
 }
 .color-txt{
   color: white;
@@ -212,33 +212,4 @@ body{
 }
 .text-dang{
   color:#C70038;
-}
-
-.contenedor{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
-
-.texto-encima{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-.centrado{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3em;
-    color: white;
-}
-
-.con:hover{
-border-bottom-left-radius: 25%;
--webkit-border-radius:0 0 0 25%;
-box-shadow: 0px 0px 15px 15px #ec731e;
--webkit-box-shadow: 0px 0px 15px 15px #ec731e;
-transform: rotate(360deg);
--webkit-transform: rotate(360deg);
 }
