@@ -185,7 +185,7 @@ header,
   padding-top: 10%;
 }
 body{
-  background: #212121
+  background: #212121;
 }
 .color-txt{
   color: white;
@@ -201,9 +201,6 @@ body{
   border-radius: 50%;
   border: solid 2px white;
 }
-.text-dang{
-  color:#C70038;
-}
 .hov{
 
 }
@@ -212,4 +209,100 @@ body{
 }
 .btnh:hover{
   background: #212121;
+}
+.text-dang{
+  color:#C70038;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: white;
+}
+
+.con:hover{
+border-bottom-left-radius: 25%;
+-webkit-border-radius:0 0 0 25%;
+box-shadow: 0px 0px 15px 15px #ec731e;
+-webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+}
+
+
+.circle {
+  width: 70px;
+  height: 70px;
+  background: green;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  /* position: absolute; */
+}
+
+.circle::before, .circle::after {
+  content:"";
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border: 10px solid gray;
+  border-radius:100%;
+  animation: latido linear 3s infinite;
+}
+
+.circle::after {
+  animation-delay: -1.5s;
+}
+
+@keyframes latido {
+  0% { width:70px; height:70px; border:10px solid gray; }
+  100% { width:120px; height:120px; border:10px solid transparent; }
+}
+
+.icono {
+  width: 42px;
+  height: 42px;
+  margin-top: 12px;
+  margin-left: 14.5px;
+}
+
+#button-0 { top: 50px; left: 100px; }
+
+.pru{
+  animation: latido linear 3s infinite;
+}
+
+.imgd{
+position:relative;
+left:40px;
+top:67px;
+z-index:-1;
+}
+
+.img2
+{
+position:relative;
+left:40px;
+top:100px;
+z-index:-3;
+}
+a{
+  text-decoration: none;
 }
