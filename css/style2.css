@@ -1,0 +1,193 @@
+.cardBox:hover + .card2 {
+    transform: rotateY( 180deg);
+}
+
+
+.card2 {
+    /* background: #222; */
+    /* color: black; */
+    cursor: default;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+}
+
+
+.card2 .front,
+.card2 .back {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    /* color: white; */
+    display: block;
+    /* font-size: 1.2em; */
+    height: 100%;
+    padding: .8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+.card2 .back {
+    transform: rotateY( 180deg);
+    padding-left: 2em;
+}
+
+
+
+@-webkit-keyframes giro {
+    from {
+        transform: rotateY( 180deg);
+    }
+    to {
+        transform: rotateY( 0deg);
+    }
+}
+
+@keyframes giro {
+    from {
+        transform: rotateY( 180deg);
+    }
+    to {
+        transform: rotateY( 0deg);
+    }
+}
+
+/*  comportamiento del tamaño de la pantalla*/
+@media screen and (max-width: 767px) {
+    .cardBox {
+        margin-left: 2.8%;
+        margin-top: 3%;
+        width: 46%;
+
+    }
+    .card2 {
+        height: 285px;
+
+    }
+    .cardBox:last-child {
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardBox {
+        width: 94.5%;
+    }
+    .card2 {
+        height: 260px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cardBox2:hover + .card22 {
+    transform: rotateY( 180deg);
+}
+
+.cardBox2{
+  left: 50%;
+}
+.card22 {
+    /* background: #222; */
+    /* color: black; */
+    cursor: default;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    -webkit-animation: giro2 1s 1;
+    animation: giro2 1s 1;
+    right: 50%;
+}
+
+
+.card22 .front2,
+.card22 .back2 {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    /* color: white; */
+    display: block;
+    /* font-size: 1.2em; */
+    height: 100%;
+    padding: .8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+.card22 .back2 {
+    transform: rotateY( 180deg);
+    padding-left: 2em;
+}
+
+
+
+@-webkit-keyframes giro2 {
+    from {
+        transform: rotateY( 180deg);
+    }
+    to {
+        transform: rotateY( 0deg);
+    }
+}
+
+@keyframes giro2 {
+    from {
+        transform: rotateY( 180deg);
+    }
+    to {
+        transform: rotateY( 0deg);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cardBox2 {
+        margin-left: 2.8%;
+        margin-top: 3%;
+        width: 46%;
+    }
+    .card22 {
+        height: 285px;
+    }
+    .cardBox2:last-child {
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardBox2 {
+        width: 94.5%;
+    }
+    .card22 {
+        height: 260px;
+    }
+}
