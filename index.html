@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/mdb.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lightbox.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="js/popper.min.js" charset="utf-8"></script>
     <script src="js/mdb.min.js" charset="utf-8"></script>
@@ -16,22 +17,31 @@
     <script src="js/fontawesome-all.js" charset="utf-8"></script>
     <script src="js/parallax.js" charset="utf-8"></script>
     <script src="js/scrollreveal.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $('.carousel').carousel();
         $(".ing").hide();
-        $("#acepting").hide();
+        $("#aceptesp").removeClass("disabled");
+        $("#acepting").addClass("disabled");
+        $("#acepting").addClass("btn-success");
         $("#aceptesp").click(function(){
           $(".ing").show();
           $(".esp").hide();
-          $("#aceptesp").hide();
-          $("#acepting").show();
+          $("#acepting").removeClass("disabled");
+          $("#acepting").removeClass("btn-success");
+          $("#aceptesp").addClass("disabled");
+          $("#aceptesp").addClass("btn-success");
         });
         $("#acepting").click(function(){
           $(".ing").hide();
           $(".esp").show();
-          $("#aceptesp").show();
-          $("#acepting").hide();
+          $("#aceptesp").removeClass("disabled");
+          $("#aceptesp").removeClass("btn-success");
+          $("#acepting").addClass("disabled");
+          $("#acepting").addClass("btn-success");
+          // $("#aceptesp").show();
+          // $("#acepting").hide();
 
         });
         // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
@@ -91,7 +101,14 @@
       <div class="collapse navbar-collapse justify-content-center font-weight-bold" id="basicExampleNav">
         <ul class="navbar-nav">
          <li class="nav-item">
-          <a class="nav-link" data-scroll href="#sec-2">Mitos, Mentiras y Verdades</a>
+          <a class="nav-link" data-scroll href="#sec-2">
+            <div class="esp">
+              Mitos, Mentiras y Verdades
+            </div>
+            <div class="ing">
+              Myths, true or false
+            </div>
+          </a>
          </li>
         </ul>
         <a class="navbar-brand px-lg-4 mr-0 d-none d-lg-block" data-scroll href="#sec-1">
@@ -99,14 +116,32 @@
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" data-scroll href="#sec-3"><i class="font3" style="font-size:1em">$ </i>Donativos</a>
+            <a class="nav-link" data-scroll href="#sec-3">
+              <div class="esp">
+                <i class="" style="font-size:1em"> $ </i>Donativos
+              </div>
+              <div class="ing">
+                <i class="" style="font-size:1em"> $ </i>Donations
+              </div>
+            </a>
           </li>
          <li class="nav-item">
-          <a class="nav-link" data-scroll href="#sec-4"><i class="fa fa-envelope" aria-hidden="true"></i> Contactanos</a>
+          <a class="nav-link" data-scroll href="#sec-4">
+            <div class="esp">
+              <i class="fa fa-envelope" aria-hidden="true"></i> Contactanos
+            </div>
+            <div class="ing">
+              <i class="fa fa-envelope" aria-hidden="true"></i> Contact
+            </div>
+          </a>
          </li>
         </ul>
-
        </div>
+
+          <div  id="acepting"><img src="img/mex.png" class="card-img-top" alt=""> </div>
+          <!-- <input type="checkbox" checked data-size="small" data-toggle="toggle" data-on='<img src="img/mex.png" width="40px" alt="">' data-off='<img src="img/usa.png" width="40px" alt="">'> -->
+          <div  id="aceptesp"><img src="img/usa.png" class="card-img-top" alt=""></div>
+
     </nav>
 
 <div class="container-fluid">
@@ -122,7 +157,7 @@
             <div class="col-md-7">
               <img src="img/donatvos.jpg" class="img-fluid z-depth-1" alt="Responsive image">
             </div>
-            <div class="col-md-5" style="background:rgba(21,21,21,.9)">
+            <div class="col-md-5" style="background:rgba(21,21,21,.9);padding-top:10px">
               <h4 class="font3 color-txt text-center font-weight-bold text-dang">
                 <div class="row">
                   <div class="offset-md-2 col-md-6">
@@ -130,18 +165,18 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="offset-md-5 col-md-6 text-left">
+                  <div class="offset-md-5 col-md- text-left">
                       <a class="font3 text-white">EN LA</a> CALLE
                   </div>
                 </div>
               </h4>
               <!-- <h6 class="font3 text-white " style=""> Adópta, esterilízalo, edúcalo, vacúnalo y sobre todo NUNCA lo abandones.</h6> -->
 
-              <h6 class="font3 text-white text-justify" style="font-size:1.15em">Esterilizar es amarlos, protegernos y eliminar el sufrimiento de millones de perros y gatos no deseados que acaban en las calles maltratados con hambre, frío y en una soledad muy dolorosa.
-                <h6 class="font3 text-dang text-justify" style="font-size:1.15em">México, <span class="font3 text-white">1er</span> lugar en población de perros callejeros.</h6>
-              <h6 class="font3 text-white text-justify" style="font-size:1.15em">¿Cuántas veces hemos visto a personas ahuyentar a patadas a un perro o gatos que se acerca buscando comida?</h6>
-               <h6 class="font3 text-dang text-justify" style="font-size:1.15em">perritos y gatitos que son atropellados, sin que nadie pueda brindarles la atención médica que requieren.
-               Esto es un problema que nos incumbe a <span class="font3 text-white">TODOS</span>. Que estas escenas, no se vuelvan parte de nuestro folklor. <span class="font3 text-white">AYÚDANOS</span> a que cada día sean menos los que sufren.</h6></h6>
+              <h6 class="font3 text-white text-justify" style="font-size:1.15em; padding-top:10px">Esterilizar es amarlos, protegerlos y eliminar el sufrimiento de millones de perros y gatos no deseados que acaban en las calles maltratados con hambre, frío y en una soledad muy dolorosa.
+                <h6 class="font3 text-white text-justify" style="font-size:1.15em">México, 1er lugar en población de perros callejeros.</h6>
+              <h6 class="font3 text-white text-justify" style="font-size:1.15em">¿Cuántas veces hemos visto a personas ahuyentar a patadas a un perro o gato que se acerca buscando comida?</h6>
+               <h6 class="font3 text-white text-justify" style="font-size:1.15em; padding-bottom:10px">Perros y gatos que son atropellados, sin que nadie pueda brindarles la atención médica que requieren.
+               <br><br>Esto es un problema que nos incumbe a <span class="font3 text-white">TODOS</span>. <br><br> Que estas escenas, no se vuelvan parte de nuestro folklor. <span class="font3 text-white">AYÚDANOS</span> a que cada día sean menos los que sufren.</h6></h6>
 
               <!-- <h5 class="font3 text-white text-justify">Esterilizar es amarlos protegernos y eliminar el sufrimiento de millones de perros no deseados que acaban en las calles maltratados con hambre frío y en una soledad muy dolorosa en Valle de Bravo y San Miguel de Allende hay aproximadamente 30,000 perros en esta situación.</h5> -->
               <!-- <h6 class="font1 text-dang text-justify">To neuter is to love, protect, and eliminate suffering of millons of unwanted dogs which en up in the streets, mistreated, hungry, cold, and in very painful loneliness. Approximately 30,000 dogs in Valle de Bravo and San Miguel de Allende are in this situation.</h6> -->
@@ -167,10 +202,14 @@
 
 
   <br>
-    <div class="row" style="background:rgba(189,189,189,.5); padding-top:15px" >
+    <div class="row" style=" padding-top:15px" >
       <div class="offset-md-2" >
-        <h5 class="font3 text-dang"> <a class="text-center">NO LOS COMPRES</a> <a class="font3 text-white"> Adópta, esterilízalo, edúcalo, vacúnalo y sobre todo NUNCA lo abandones.</a></h5>
-        <h5 class="font3 text-dang"><a class="font3 text-white">DON'T BUY DOGS</a> Adopt, neuter, educate, vaccinate and above all NEVER abandon them.</h5>
+        <div class="esp">
+          <h5 class="font3 text-white"> <a class="text-center">NO LOS COMPRES</a> <a class="font3 text-white"> Adópta, esterilízalo, edúcalo, vacúnalo y sobre todo NUNCA lo abandones.</a></h5>
+        </div>
+        <div class="ing">
+          <h5 class="font3 text-white"><a class="font3 text-white">DON'T BUY DOGS</a> Adopt, neuter, educate, vaccinate and above all NEVER abandon them.</h5>
+        </div>
 
       </div>
       <!-- <h5 class="font3 text-dang"> </h5> -->
@@ -178,18 +217,27 @@
   </section>
   <section class="" style="padding-top:10px">
     <div class="parallax-window" data-parallax="scroll" data-image-src="img/n14.jpg" style="background: rgba(21,21,21,0.2);">
-      <div class="row" style="padding-top:1%">
-      <div class="offset-8 col-md-4" style="right:3%">
-        <img src="img/crecimiento perros.png" width="105%" height="100%" alt="">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="img/crecimiento perros.png" class="img-fluid" alt="Responsive image">
+
+        </div>
       </div>
-    </div>
+      <!-- <div class="row" style="padding-top:1%">
+      <div class="offset-8 col-md-4" style="right:1.6%">
+      <img src="img/crecimiento perros.png" width="105%" height="100%" alt="">
+      </div>
+    </div> -->
     </div>
   </section>
   <section class="testimonial color-txt" id="sec-2" style="background:#414141">
       <div class="container">
-        <h1 class="font3" >Mitos, Mentiras y Verdades</h1>
-        <button type="button" name="button" id="acepting">Español</button>
-        <button type="button" name="button" id="aceptesp">Ingles</button>
+        <div class="esp">
+          <h1 class="font3" >Mitos, Mentiras y Verdades</h1>
+        </div>
+        <div class="ing">
+          <h1 class="font3" >Myths, true or false</h1>
+        </div>
       </div>
   </section>
   <section class="d-none d-lg-block d-print-block">
@@ -209,49 +257,46 @@
 
                 <!-- <h4 class="card-title"><a>Card title</a></h4> -->
                 <div class="d-none d-lg-block d-print-block">
-
                   <p class="card-text ">
                     <div class="esp" id="">
                       <h5 class="font3 color-txt">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS Y GATOS CALLEJEROS.</h5>
-                      <h5 class="font3 text-dang">FALSO: <span class="font3 color-txt">La fábrica de perros y gatos, están en las casas de dueños que no
-                        esterilizan a sus animales. Muchos dueños permiten que sus animales
-                        salgan de casa solos y es ahí cuando frecuentemente se cruzan. Otro problema muy real y cruel, es que muchos compran un cachorro adorable,
-                        no se le educa y se convierte en un adulto problemático y en el 90% de los casos son abandonados. Esto es lo más inhumano que existe y en su
+                      <h5 class="font7 text-dang">FALSO: <span class="font2 color-txt">La fábrica de perros y gatos, están en las casas de dueños que no
+                        esterilizan a sus animales.<br> Muchos dueños permiten que sus animales
+                        salgan de casa solos y es ahí cuando frecuentemente se cruzan. <br> Otro problema muy real y cruel, es que muchos compran un cachorro adorable,
+                        no se le educa y se convierte en un adulto problemático y en el 90% de los casos son abandonados. <br>Esto es lo más inhumano que existe y en su
                         mayoria, NO están esterilizados.</span></h5>
                     </div>
                     <div class="ing" id="">
                       <h5 class="font3 color-txt">NEUTERING SHOULD ONLY BE DONE ON STREET DOGS AND CATS</h5>
-                      <h5 class="font3 text-dang">FALSE: <span class="font3 color-txt">The main dog and cat factories are in the houses of the owners who don't
-                        neuter their pets. Many owners allow their dogs to go out on their own, and that is when they frequently mate. Another cruel but common problem is that
-                        many buy a lovely puppy, which later becomes a problematic adult and in many cases they are abandoned.This is the most inhumane thing and worst of all,
+                      <h5 class="font7 text-dang">FALSE: <span class="font2 color-txt">The main dog and cat factories are in the houses of the owners who don't
+                        neuter their pets. <br>Many owners allow their dogs to go out on their own, and that is when they frequently mate.<br> Another cruel but common problem is that
+                        many buy a lovely puppy, which later becomes a problematic adult and in many cases they are abandoned.<br>This is the most inhumane thing and worst of all,
                         they are most likely not neutered.</span></h5>
                     </div>
                   </p>
                 </div>
-
-
               </div>
-
               <div class="card-body back text-justify">
                 <div class="d-none d-lg-block d-print-block">
                   <div class="esp" id="">
-                    <p class="card-text"><h4 class="font3 color-txt">Los perros son los únicos mamíferos que realmente mirarán fijamente a los ojos
-                      a un ser humano.</h4>
+                    <p class="card-text " style="padding-top:20%">
+                      <h4 class="font color-txt text-justify">
+                        Los perros son los únicos mamíferos que realmente mirarán fijamente a los a un ser humano.
+                      </h4>
                     </p>
                     <p class="card-text ">
-                      <h5 class="font color-txt">Jerry O'Conell</h5>
+                      <h5 class="font color-txt text-center">Jerry O'Conell</h5>
                     </p>
                   </div>
                   <div class="ing" id="">
-                    <p class="card-text  "> <h5 class="text-dang font7">Dogs are the only mammals that will actually
-                        stare and look into human's eyes.</h5>
+                    <p class="card-text  " style="padding-top:20%"> <h4 class="text-white font">Dogs are the only mammals that will actually
+                        stare and look into human's eyes.</h4>
                     </p>
                     <p class="card-text ">
-                      <h5 class="text-dang font">Jerry O'Conell</h6>
+                      <h5 class="text-white font text-center">Jerry O'Conell</h5>
                     </p>
                   </div>
                 </div>
-
               </div>
           </figure>
           <figure class="col-md-6 view overlay cardBox2">
@@ -263,30 +308,43 @@
           <figure class="col-md-6 card22">
               <div class="card-body front2 text-justify">
                 <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h6 class="font3 color-txt">MI PERRO O GATO VA A PERDER SU MASCULINIDAD.</h6>
-                    <h6 class="font3 text-dang">FALSO: <span class="font3 color-txt">A menudo los hombres tienden a tener una visión antropomórfica de sus perros o gatos
-                      con respecto a la esterilizaciónm sin embargo lo que nosotros llamamos masculinidad para ellos es frustración por querer aparearse y no
-                      permitírselo.Queremos a nuestros perros y gatos por el cariño y amor que nos dan, su masculinidad a menudo se convierte en un problema, tanto para ellos, como para la familia, que tiene que lidiar con el marcaje territorial y peleas con otros machos</span></h6>
-                      <h5 class="font7 ing-tit text-dang">MY DOG OR CAT WILL LOSE HIS MASCULINITY</h5>
-                      <h5 class="font7 ing-sub color-txt">FALSE: <span class="text-dang">Some men tend to have an anthropomorphic vision of their male dogs or cats in respect to castration. Nonetheless, what
-                        we call masculinity in humans refers to frustration in them.It is frustrating for them to want to mate and not be allowed to. We love our dogs and cats because of the love and affection they give us back, and sometimes this masculinity becomes a problem both for the them, and for the people dealng with territorial markings and competitiveness with other males</span></h5>
-                      </p>
+                  <p class="card-text ">
+                    <div class="esp" id="">
+                      <h5 class="font3 color-txt">MI PERRO O GATO VA A PERDER SU MASCULINIDAD.</h5>
+                      <h5 class="font7 text-dang">FALSO: <span class="font2 color-txt">A menudo los hombres tienden a tener una visión antropomórfica de sus perros o gatos
+                        con respecto a la esterilizaciónm sin embargo lo que nosotros llamamos masculinidad para ellos es frustración por querer aparearse y no
+                        permitírselo. <br>Queremos a nuestros perros y gatos por el cariño y amor que nos dan, su masculinidad a menudo se convierte en un problema, tanto para ellos, como para la familia, que tiene que lidiar con el marcaje territorial y peleas con otros machos</span></h5>
+                    </div>
+                    <div class="ing" id="">
+                      <h5 class="font3 color-txt">MY DOG OR CAT WILL LOSE HIS MASCULINITY</h5>
+                      <h5 class="font7 text-dang">FALSE: <span class="font2 text-white">Some men tend to have an anthropomorphic vision of their male dogs or cats in respect to castration. Nonetheless, what
+                        we call masculinity in humans refers to frustration in them. <br>It is frustrating for them to want to mate and not be allowed to.<br> We love our dogs and cats because of the love and affection they give us back, and sometimes this masculinity becomes a problem both for the them, and for the people dealng with territorial markings and competitiveness with other males</span></h5>
+                    </div>
+
+                    </p>
+
                 </div>
               </div>
               <div class="card-body back2 text-justify">
                 <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h4 class="font3 color-txt">Los perros nunca me muerden.
-                    Sólo los seres humanos lo hacen.
-                  </h4>
-                </p>
-                <p class="card-text">
-                  <h5 class="font color-txt">Marilyn Monroe</h5>
-                </p>
-                <p class="card-text  "> <h4 class="text-dang font7">Dogs never bite me. Just humans.</h4>
-                </p>
-                <p class="card-text ">
-                  <h5 class="text-dang font">Marilyn Monroe</h5>
-                </p>
+                  <div class="esp" id="">
+                    <p class="card-text " style="padding-top:20%">
+                      <h4 class="font color-txt">
+                        Los perros nunca me muerden.
+                        Sólo los seres humanos lo hacen.
+                      </h4>
+                    </p>
+                    <p class="card-text">
+                      <h5 class="font color-txt text-center">Marilyn Monroe</h5>
+                    </p>
+                  </div>
+                  <div class="ing" id="">
+                    <p class="card-text  " style="padding-top:20%"> <h4 class="text-white font">Dogs never bite me. Just humans.</h4>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="text-white font text-center">Marilyn Monroe</h5>
+                    </p>
+                  </div>
                 </div>
               </div>
           </figure>
@@ -302,36 +360,46 @@
           <figure class="col-md-6 card2">
                 <div class="card-body front text-justify">
                   <div class="d-none d-lg-block d-print-block">
-                    <p class="card-text "><h6 class="font3 color-txt">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h6>
-                      <h6 class="font3 text-dang">VERDAD A MEDIAS: <span class="font3 color-txt">al ser esterilizados, la actividad sexual
-                        se reduce drasticamente y su organismo debe gastar menos energía.En otras palabras, el perro o gato deja de estar
-                        ansioso por encontrar con quien aparearse, deja de competir con otros de su mismo sexo y, en el caso de las hembras,
-                        dejan de tener el celo y el sobreesfuerzo que eso significa para el organismo. Pero eso no significa que vayan a engordar,
-                        basta con regular le la comida y el ejercicio para que no consuma más calorías de lo que gasta.</span></h6>
-                        <h5 class="font7 ing-tit text-dang">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h5>
-                        <h5 class="font7 ing-sub color-txt">PARTLY TRUE: <span class="text-dang">When they are neutered, sexual activity
+
+                    <p class="card-text ">
+                      <div class="esp" id="">
+                        <h5 class="font3 color-txt">LOS PERROS SE VUELVEN MENOS ACTIVOS Y ENGORDAN.</h5>
+                        <h5 class="font7 text-dang">VERDAD A MEDIAS: <span class="font2 color-txt">al ser esterilizados, la actividad sexual
+                          se reduce drasticamente y su organismo debe gastar menos energía.<br>En otras palabras, el perro o gato deja de estar
+                          ansioso por encontrar con quien aparearse, deja de competir con otros de su mismo sexo y, en el caso de las hembras,
+                          dejan de tener el celo y el sobreesfuerzo que eso significa para el organismo. Pero eso no significa que vayan a engordar,
+                          basta con regular le la comida y el ejercicio para que no consuma más calorías de lo que gasta.</span></h5>
+                      </div>
+                      <div class="ing" id="">
+                        <h5 class="font3 color-txt">DOGS BECOME LESS ATIVE AND CAN GAIN WEIGHT.</h5>
+                        <h5 class="font7 text-dang">PARTLY TRUE: <span class="font2 text-white">When they are neutered, sexual activity
                           decreases drastically and their organism uses less energy.In other words, the dog is less anxious to find a mating partner
-                          and is less competitive against other. In the cases of females they stop going through heat cycles and the accompanying overload on
-                          the body decreases. This doesn't necessarily mean that they'll gain weight, as long as they have a good nutrition and exercise regimen,
-                           they won't more calories than they are spending.</span></h5>
+                          and is less competitive against other.<br> In the cases of females they stop going through heat cycles and the accompanying overload on
+                          the body decreases. <br> This doesn't necessarily mean that they'll gain weight, as long as they have a good nutrition and exercise regimen,
+                          they won't more calories than they are spending.</span></h5>
+                      </div>
                         </p>
                   </div>
                 </div>
                 <div class="card-body back text-justify">
                     <div class="d-none d-lg-block d-print-block">
-                      <p class="card-text "><h4 class="font3 color-txt">Tener compasión de todos los seres vivos, es
-                        lo que hace al hombre realmente humano.
-                      </h4>
+                      <div class="esp" id="">
+                        <p class="card-text " style="padding-top:20%"><h4 class="font color-txt">Tener compasión de todos los seres vivos, es
+                          lo que hace al hombre realmente humano.
+                        </h4>
                       </p>
                       <p class="card-text">
-                        <h5 class="font color-txt">Albert Schweitzer</h5>
+                        <h5 class="font color-txt text-center">Albert Schweitzer</h5>
                       </p>
-                      <p class="card-text  "> <h5 class="text-dang font7">Until he estends his circle of compassion to
-                        include all living things, man will not himself.</h5>
-                      </p>
-                      <p class="card-text ">
-                        <h6 class="text-dang font">Albert Schweitzer</h6>
-                      </p>
+                      </div>
+                      <div class="ing" id="">
+                        <p class="card-text  " style="padding-top:20%"> <h4 class="text-white font">Until he estends his circle of compassion to
+                          include all living things, man will not himself.</h4>
+                        </p>
+                        <p class="card-text ">
+                          <h5 class="text-white font text-center">Albert Schweitzer</h5>
+                        </p>
+                      </div>
                     </div>
                 </div>
           </figure>
@@ -346,35 +414,44 @@
           <figure class="col-md-6 card22">
               <div class="card-body front2 text-justify">
                 <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h6 class="font3 color-txt">LA ESTERILIZACIÓN LE CAMBIA EL CARACTER.</h6>
-                    <h6 class="font3 text-dang">FALSO: <span class="font3 color-txt">Los únicos aspectos que cambian en el carácter son aquellos que benefician la interacción con ellos, razón por la cual la mayoría
-                      de los perros y gatos que son adiestrados o trabajan en terapia están esterilizados.Con la castración el perro se vuelve más centrado, ya que no esta revolucionado por las hormonas que le incitan al apareamiento.
-                      También se evitan conductas como el marcaje territorial, las fugas en busca de apareamiento, la ansiedad, el manchado de sangre por el celo, aparte de las enormes ventajas para la salud de ellos.</span></h6>
-                      <h5 class="font7 ing-tit text-dang">NEUTERING CHANGES THEIR CHARACTER</h5>
-                      <h5 class="font7 ing-sub color-txt">FALSE: <span class="text-dang">The only aspects of a dog's character that change are precisely those that benefit the interaction whit them,
-                        which is why most dogs that are trained for specific reasons, such as therapy dogs, must be neutered.It makes them become more centered, without the effects of hormones that incite them to mate.
-                      Neutering prevents behaviors such as markings, dogs and cats escaping to find a mating partner, anxiety, blood stains during heat cycles, apartamento frontera the crear health benéfica mentioned</span></h5>
+                  <p class="card-text ">
+                    <div class="esp" id="">
+                      <h5 class="font3 color-txt">LA ESTERILIZACIÓN LE CAMBIA EL CARACTER.</h5>
+                      <h5 class="font7 text-dang">FALSO: <span class="font2 color-txt">Los únicos aspectos que cambian en el carácter son aquellos que benefician la interacción con ellos, razón por la cual la mayoría
+                        de los perros y gatos que son adiestrados o trabajan en terapia están esterilizados.<br>Con la castración el perro se vuelve más centrado, ya que no esta revolucionado por las hormonas que le incitan al apareamiento.<br>
+                        También se evitan conductas como el marcaje territorial, las fugas en busca de apareamiento, la ansiedad, el manchado de sangre por el celo, aparte de las enormes ventajas para la salud de ellos.</span></h5>
+                    </div>
+                    <div class="ing" id="">
+                      <h5 class="font3 color-txt">NEUTERING CHANGES THEIR CHARACTER</h5>
+                      <h5 class="font7 text-dang">FALSE: <span class="font2 text-white">The only aspects of a dog's character that change are precisely those that benefit the interaction whit them,
+                        which is why most dogs that are trained for specific reasons, such as therapy dogs, must be neutered.<br>  It makes them become more centered, without the effects of hormones that incite them to mate.<br>
+                        Neutering prevents behaviors such as markings, dogs and cats escaping to find a mating partner, anxiety, blood stains during heat cycles, apartamento frontera the crear health benéfica mentioned</span></h5>
+                    </div>
                       </p>
                 </div>
               </div>
               <div class="card-body back2 text-justify">
                 <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text ">
-                    <h4 class="font3 color-txt">
-                      No me importa mucho la religión de hombre cuyo perro y gato no son lo mejor para el.
-                    </h4>
-                  </p>
-                  <p class="card-text">
-                    <h5 class="font color-txt">Abraham Lincoln</h5>
-                  </p>
-                  <p class="card-text">
-                    <h5 class="text-dang font7">
-                      I care not much for a man's religion whose dog and cat are not the better for it.
-                    </h5>
-                  </p>
-                  <p class="card-text ">
-                    <h6 class="text-dang font">Abraham Lincoln</h6>
-                  </p>
+                  <div class="esp" id="">
+                    <p class="card-text " style="padding-top:20%">
+                      <h4 class="font color-txt">
+                        No me importa mucho la religión de hombre cuyo perro y gato no son lo mejor para el.
+                      </h4>
+                    </p>
+                    <p class="card-text">
+                      <h5 class="font color-txt text-center">Abraham Lincoln</h5>
+                    </p>
+                  </div>
+                  <div class="ing" id="">
+                    <p class="card-text" style="padding-top:20%">
+                      <h4 class="text-white font">
+                        I care not much for a man's religion whose dog and cat are not the better for it.
+                      </h4>
+                    </p>
+                    <p class="card-text ">
+                      <h5 class="text-white font text-center">Abraham Lincoln</h5>
+                    </p>
+                  </div>
                 </div>
               </div>
           </figure>
@@ -389,73 +466,93 @@
           <figure class="col-md-6 card2">
                 <div class="card-body front text-justify">
                   <div class="d-none d-lg-block d-print-block">
-                    <p class="card-text "><h6 class="font3 color-txt" >LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h6>
-                      <h6 class="font3 text-dang">FALSO: <span class="font3 color-txt">La esterilización animal es una de las intervenciones
-                        más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
-                        las clínicas del mundo. Sin embargo, sí conlleva un enorme riesgo para la salud no esterilizar a un perro,
-                         ya que con gran probabilidad sufrirá tumores de mama o hipertrofia prostática benigna, algo fácilmente evitable con esterilización.
-                         Además, está comprobado que los perros y gatos esterilizados tienen una esperanza de vida mayor</span></h6>
 
-                        <h4 class="font7 ing-tit text-dang">NEUTERING SURGERIES ARE VERY RISKY.</h4>
-                        <h4 class="font7 ing-sub color-txt">FALSE: <span class="font4 text-dang">The sugery to neuter an animal is one of the simplest and faster
-                          procedures done very day an whit a minimal accident rate in clinics around the world. On the other hand, It is a huge health risk to not neuter a dog,increasing the risk
-                        of conditions such as breast cancer or prostatic hypertrophy causing urinary problems. It is also
-                      proven by research that neutered dogs have a greater life expectancy.</span></h4>
+                    <p class="card-text ">
+                      <div class="esp" id="">
+                        <h5 class="font3 color-txt" >LA CIRUGIA DE LA ESTERILIZACIÓN CONLLEVA MUCHO RIESGO.</h5>
+                        <h5 class="font7 text-dang">FALSO: <span class="font2 color-txt">La esterilización animal es una de las intervenciones
+                          más rutinarias, sencillas y rápidas que se hacen a diario, con una tasa de accidentes mínima en todas
+                          las clínicas del mundo.<br> Sin embargo, sí conlleva un enorme riesgo para la salud no esterilizar a un perro,
+                          ya que con gran probabilidad sufrirá tumores de mama o hipertrofia prostática benigna, algo fácilmente evitable con esterilización.<br>
+                          Además, está comprobado que los perros y gatos esterilizados tienen una esperanza de vida mayor</span></h5>
+                      </div>
+                      <div class="ing" id="">
+                        <h5 class="font3 color-txt">NEUTERING SURGERIES ARE VERY RISKY.</h5>
+                        <h5 class="font7 text-dang">FALSE: <span class="font2 text-dang">The sugery to neuter an animal is one of the simplest and faster
+                          procedures done very day an whit a minimal accident rate in clinics around the world. <br>On the other hand, It is a huge health risk to not neuter a dog, increasing the risk
+                          of conditions such as breast cancer or prostatic hypertrophy causing urinary problems.<br> It is also
+                          proven by research that neutered dogs have a greater life expectancy.</span></h5>
+                      </div>
+
                         </p>
                   </div>
                 </div>
                 <div class="card-body back text-justify">
                     <div class="d-none d-lg-block d-print-block">
-                      <p class="card-text "><h4 class="font3 color-txt">Un perro enseña a un muchacho fidelidad,
-                        perseverancia y a dar vueltas tres veces antes de acostarse.
-                      </h4>
-                      </p>
-                      <p class="card-text">
-                        <h5 class="fon color-txt">Robert Benchley</h5>
-                      </p>
-                      <p class="card-text  "> <h5 class="text-dang font7">A dog teaches a boy fidelity, perseverance, and
-                        to turn around three times before lying down.</h5>
-                      </p>
-                      <p class="card-text ">
-                        <h6 class="text-dang font">Robert Benchley</h6>
-                      </p>
+                      <div class="esp" id="">
+                        <p class="card-text " style="padding-top:20%"><h4 class="font color-txt">Un perro enseña a un muchacho fidelidad,
+                            perseverancia y a dar vueltas tres veces antes de acostarse.
+                          </h4>
+                        </p>
+                        <p class="card-text">
+                          <h5 class="font color-txt text-center">Robert Benchley</h5>
+                        </p>
+                      </div>
+                      <div class="ing" id="">
+                        <p class="card-text  " style="padding-top:20%"> <h4 class="text-white font">A dog teaches a boy fidelity, perseverance, and
+                          to turn around three times before lying down.</h4>
+                        </p>
+                        <p class="card-text ">
+                          <h5 class="text-white font text-center">Robert Benchley</h5>
+                        </p>
+                      </div>
                     </div>
                 </div>
           </figure>
           <figure class="col-md-6 view overlay cardBox2">
             <div class="card">
-              <img class="card-img-top" src="img/gatos2.jpg" alt="Card image cap">
+              <img class="card-img-top" src="img/n12.jpg" alt="Card image cap">
 
             </div>
           </figure>
           <figure class="col-md-6 card22">
               <div class="card-body front2 text-justify">
                 <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h6 class="font3 color-txt">LOS PROCEDIMIENTOS SON MUY CAROS.</h6>
-                    <h6 class="font3 text-dang">VERDAD A MEDIAS: <span class="font3 color-txt">Existen instituciones gubernamentales que ofrecen un servicio gratuito y el costo privado varía de médico a médico.</span></h6>
+                  <p class="card-text ">
+                    <div class="esp" id="">
+                      <h5 class="font3 color-txt">LOS PROCEDIMIENTOS SON MUY CAROS.</h6>
+                      <h5 class="font7 text-dang">VERDAD A MEDIAS: <span class="font2 color-txt">Existen instituciones gubernamentales que ofrecen un servicio gratuito y el costo privado varía de médico a médico.</span></h6>
+                    </div>
                     <br>
-                    <h5 class="font7 ing-tit text-dang">NEUTERING PROCEDURES ARE VERY EXPENSIVE</h5>
-                    <h5 class="font7 ing-sub color-txt">FALSE: <span class="text-dang">There are many institutions and private clinics that as a free service or whit a minimal cost.</span></h5>
+                    <div class="ing" id="">
+                      <h5 class="font3 color-txt">NEUTERING PROCEDURES ARE VERY EXPENSIVE</h5>
+                      <h5 class="font7 text-dang">FALSE: <span class="font2 text-white">There are many institutions and private clinics that as a free service or whit a minimal cost.</span></h5>
+                    </div>
                   </p>
                 </div>
               </div>
               <div class="card-body back2 text-justify">
                 <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h4 class="font3 color-txt">Si recoges un perro hambriento de la calle y lo
-                    haces próspero, no te morderá; esa es la principal diferencia entre un perro y un hombre.
-                  </h4>
-                  </p>
-                  <p class="card-text">
-                    <h5 class="font color-txt">Mark Twain</h5>
-                  </p>
-                  <p class="card-text  "> <h5 class="text-dang font7">If you pick up a starving dog and make him
-                    prosperous, he will not bite you. This is the
-                    principal difference between a dog and a man.
-                  </h5>
+                  <div class="esp" id="">
+                    <p class="card-text " style="padding-top:20%">
+                      <h4 class="font color-txt">Si recoges un perro hambriento de la calle y lo
+                        haces próspero, no te morderá; esa es la principal diferencia entre un perro y un hombre.
+                      </h4>
+                    </p>
+                    <p class="card-text">
+                      <h5 class="font color-txt text-center">Mark Twain</h5>
+                    </p>
+                  </div>
+                  <div class="ing" id="">
+                    <p class="card-text  " style="padding-top:20%"> <h4 class="text-white font">If you pick up a starving dog and make him
+                      prosperous, he will not bite you. This is the
+                      principal difference between a dog and a man.
+                    </h4>
                   </p>
                   <p class="card-text ">
-                    <h6 class="text-dang font">Mark Twain</h6>
+                    <h5 class="text-white font text-center">Mark Twain</h5>
                   </p>
+                  </div>
                 </div>
               </div>
           </figure>
@@ -470,33 +567,42 @@
           <figure class="col-md-6 card2">
                 <div class="card-body front text-justify">
                   <div class="d-none d-lg-block d-print-block">
-                    <p class="card-text "><h6 class="font3 color-txt">LA ESTERILIZACIÓN MODIFICA SU TAMAÑO Y CARACTERISTÍCAS GENÉTICAS.</h6>
-                      <h6 class="font3 text-dang">VERDAD A MEDIAS: <span class="font3 color-txt">El tamaño que tendrá de adulto un cachorro, viene determinado
-                        genéticamente, principalmente por el padre, lo que si el padre es grande, lo más probable es que sus hijos tambien lo sean.
-                        Esterilización de la hembra podría alterar un poco esta regla sin embargo no existe evidencia científica que lo aseguré.</span></h6>
+                    <p class="card-text ">
+                      <div class="esp" id="">
+                        <h5 class="font3 color-txt">LA ESTERILIZACIÓN MODIFICA SU TAMAÑO Y CARACTERISTÍCAS GENÉTICAS.</h5>
+                        <h5 class="font7 text-dang">VERDAD A MEDIAS: <span class="font2 color-txt">El tamaño que tendrá de adulto un cachorro, viene determinado
+                          genéticamente, principalmente por el padre, lo que si el padre es grande, lo más probable es que sus hijos tambien lo sean.<br>
+                          Esterilización de la hembra podría alterar un poco esta regla sin embargo no existe evidencia científica que lo aseguré.</span></h5>
+                      </div>
+                      <div class="ing" id="">
+                        <h5 class="font3 color-txt">NEUTERING ALTERS THEIR SIZE AND GENETIC CHARACTERISTICS.</h5>
+                        <h5 class="font7 text-dang">PARTLY TRUE: <span class="font2 text-white">The adult size of a puppy or kitten is genetically predetermined, mainly from the father's side.<br>
+                          If the dad is big, it is likely that the puppies will be also. <br>Spaying of females could alter this rule a bit,
+                          but there is no sufficient evidence that proves this.</span></h5>
+                      </div>
 
-                        <h5 class="font7 ing-tit text-dang">NEUTERING ALTERS THEIR SIZE AND GENETIC CHARACTERISTICS.</h5>
-                        <h5 class="font7 ing-sub color-txt">PARTLY TRUE: <span class="text-dang">The adult size of a puppy or kitten is genetically predetermined, mainly from the father's side.
-                          If the dad is big, it is likely that the puppies will be also. Spaying of females could alter this rule a bit,
-                        but there is no sufficient evidence that proves this.</span></h5>
                         </p>
                   </div>
                 </div>
                 <div class="card-body back text-justify">
                     <div class="d-none d-lg-block d-print-block">
-                      <p class="card-text "><h4 class="font3 color-txt">Es vergonzoso para nuestra especie que, siendo el
-                        perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
-                      </h4>
+                      <div class="esp" id="">
+                        <p class="card-text " style="padding-top:20%"><h4 class="font color-txt">Es vergonzoso para nuestra especie que, siendo el
+                          perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
+                        </h4>
                       </p>
                       <p class="card-text">
-                        <h5 class="font color-txt">Eduardo Lamazón</h5>
+                        <h5 class="font color-txt text-center">Eduardo Lamazón</h5>
                       </p>
-                      <p class="card-text  "> <h5 class="text-dang font7">It is shameful for our species that, being the dog
-                        man's best friend, men are dogs' worst enemies.</h5>
-                      </p>
-                      <p class="card-text ">
-                        <h6 class="text-dang font">Eduardo Lamazón</h6>
-                      </p>
+                      </div>
+                      <div class="ing" id="">
+                        <p class="card-text  " style="padding-top:20%"> <h4 class="text-white font">It is shameful for our species that, being the dog
+                          man's best friend, men are dogs' worst enemies.</h4>
+                        </p>
+                        <p class="card-text ">
+                          <h5 class="text-white font text-center">Eduardo Lamazón</h5>
+                        </p>
+                      </div>
                     </div>
                 </div>
           </figure>
@@ -512,38 +618,47 @@
           <figure class="col-md-6 card22">
               <div class="card-body front2 text-justify">
                 <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h6 class="font3 color-txt">LAS PERRAS DEBEN ESTERILIZARSE DESPUÉS DEL PRIMER CELO.</h6>
-                    <h6 class="font3 text-dang">FALSO: <span class="font3 color-txt">Las hembras no necesitan pasar por su primer celo. Esta creencia proviene de los años 40's
-                      cuando se comenzó a esterilizar de forma regular a los perros de compañia.
-                      Por entonces, las técnicas de terinaria no permitían asegurar el éxito de la operación a perros y gatos menores de 6 meses.
-                      actualmente Contamos con mejores técnicas quirúrgicas y es posible esterilizar cachorros con 6-8 semanas, sin ningún riesgo.
-                      Es más, a edades tempranas, esterilización tiene menos riesgos de hemorragia, la recuperación es más rápida y se disminuye el riesgo de tumor de mama.</span></h6>
-                      <h5 class="font7 ing-tit text-dang">FEMALES MUST BE SPAYED AFTER THE FIRST HEAT</h5>
-                      <h5 class="font7 ing-sub color-txt">FALSE: <span class="text-dang">Actually, the effectiveness of spayinf to prevent breast cancer decreases once the dog
-                        has gone through her first head cycle. This myth originated in the 1940's when companion dogs began to be regulary neutered.
-                        Back then the veterinary techniques didn't ensure success in dogs and cats younger than six months. Today, we have better training and technology and it is
+                  <p class="card-text ">
+                    <div class="esp" id="">
+                      <h5 class="font3 color-txt">LAS PERRAS DEBEN ESTERILIZARSE DESPUÉS DEL PRIMER CELO.</h5>
+                      <h5 class="font7 text-dang">FALSO: <span class="font2 color-txt">Las hembras no necesitan pasar por su primer celo. Esta creencia proviene de los años 40's
+                        cuando se comenzó a esterilizar de forma regular a los perros de compañia.<br>
+                        Por entonces, las técnicas de terinaria no permitían asegurar el éxito de la operación a perros y gatos menores de 6 meses.<br>
+                        actualmente Contamos con mejores técnicas quirúrgicas y es posible esterilizar cachorros con 6-8 semanas, sin ningún riesgo.<br>
+                        Es más, a edades tempranas, esterilización tiene menos riesgos de hemorragia, la recuperación es más rápida y se disminuye el riesgo de tumor de mama.</span></h5>
+                    </div>
+                    <div class="ing" id="">
+                      <h5 class="font3 color-txt">FEMALES MUST BE SPAYED AFTER THE FIRST HEAT</h5>
+                      <h5 class="font7 text-dang">FALSE: <span class="font2 text-white">Actually, the effectiveness of spayinf to prevent breast cancer decreases once the dog
+                        has gone through her first head cycle. <br> This myth originated in the 1940's when companion dogs began to be regulary neutered. <br>
+                        Back then the veterinary techniques didn't ensure success in dogs and cats younger than six months. <br> Today, we have better training and technology and it is
                         possible to neuter puppies as young as 6-8 weeks old without greater risks, and actually at such young age, the likelihood of hemorrhage is lower and
                         recovery is faster.
                       </span></h5>
+                    </div>
                     </p>
                 </div>
               </div>
               <div class="card-body back2 text-justify">
                 <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h4 class="font3 color-txt">Es vergonzoso para nuestra especie que, siendo el
-                    perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
-                  </h4>
+                  <div class="esp" id="">
+                    <p class="card-text " style="padding-top:20%"><h4 class="font color-txt">Es vergonzoso para nuestra especie que, siendo el
+                      perro el mejor amigo del hombre, sea el hombre el peor amigo del perro.
+                    </h4>
                   </p>
                   <p class="card-text">
-                    <h5 class="font color-txt">Gandhi</h5>
+                    <h5 class="font color-txt text-center">Gandhi</h5>
                   </p>
-                  <p class="card-text  "> <h4 class="text-dang font3">It is shameful for our species that, being the dog
-                    man's best friend, men are dogs' worst enemies.
-                  </h4>
+                  </div>
+                  <div class="ing" id="">
+                    <p class="card-text  " style="padding-top:20%"> <h4 class="text-white font">It is shameful for our species that, being the dog
+                      man's best friend, men are dogs' worst enemies.
+                    </h4>
                   </p>
                   <p class="card-text ">
-                    <h5 class="text-dang font">Gandhi</h5>
+                    <h5 class="text-white font text-center">Gandhi</h5>
                   </p>
+                  </div>
                 </div>
               </div>
           </figure>
@@ -740,7 +855,7 @@
     </div>
   <div class="parallax-window" data-parallax="scroll" data-image-src="img/n11.jpg" style="background:rgba(21,21,21,0.2)">
     <div class="col-md-6 mb-4 white-text wow fadeIn" >
-      <div class="row" style="padding-top:10%">
+      <!-- <div class="row" style="padding-top:10%">
         <div class="col-md-8" style="background:rgba(21,21,21,.9);">
           <h3 class="font3 text-white text-center">LOS PROCEDIMIENTOS SON MUY CAROS</h3>
           <hr class="hr-light my-4 w-100">
@@ -749,13 +864,18 @@
               médicos básicos, ayudándonos a alcanzar nuestra meta de esterilizar 1,500 perros en esta primera etapa</h5>
             </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <section class="testimonial" id="sec-3" style="">
     <div class="container-fluid ">
-      <h1 class="font3 color-txt color-txt" >Datos bancarios para donativos</h1>
-      <h3 class="font3 text-dang" >Bank information for donations</h3>
+      <div class="esp">
+        <h1 class="font3 color-txt color-txt" >Datos bancarios para donativos</h1>
+      </div>
+      <div class="ing">
+        <h1 class="font3 text-white" >Bank information for donations</h1>
+
+      </div>
       <div class="row">
         <div class="col-md-5 ">
             <img src="img/n1.jpg" class="img-fluid" alt="Responsive image">
@@ -763,37 +883,46 @@
         <div class="col-md-6">
           <div class="row">
             <div class="col-md-12 text-left">
-            <h5 class="font3 color-txt">Banco: <img src="img/banorte.png" width="25%" style="border-radius:3px"></h5>
-            <h6 class="font3 color-txt">A nombre de: LIGA VALLESANA PARA LOS DERECHOS DE LOS ANIMALES, AC.</h6>
-            <h6 class="font3 color-txt">Cuenta: 0660 8964 69</h6>
+            <div class="esp">
+              <h5 class="font3 color-txt">Banco: <img src="img/banorte.png" width="25%" style="border-radius:3px"></h5>
+              <h6 class="font3 color-txt">Cuenta: 0660 8964 69</h6>
+            </div>
+            <div class="ing">
+              <h5 class="font3 color-txt">Bank: <img src="img/banorte.png" width="25%" style="border-radius:3px"></h5>
+              <h6 class="font3 color-txt">Account: 0660 8964 69</h6>
+            </div>
+            <h6 class="font3 color-txt">LIGA VALLESANA PARA LOS DERECHOS DE LOS ANIMALES, AC.</h6>
             <h6 class="font3 color-txt">CLABE: 0724 5700 6608 9646 99</h6>
             </div>
             <div class="row">
               <div class="col-md-6 col-sm-12 text-left ">
                 <hr style="border: 1px solid white">
-                <h6 class="font3 color-txt"><img src="img/oxxo.png" width="24%" height="">: 4189 2810 4299 8006</h6>
+                <h6 class="font3 color-txt"><img src="img/oxxo.png" width="18%" height="">: 4189 2810 4299 8006</h6>
               </div>
               <div class="col-md-6 col-sm-12 text-left">
                 <hr style="border: 1px solid white">
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                   <input type="hidden" name="cmd" value="_s-xclick">
                   <input type="hidden" name="hosted_button_id" value="DDJGRAS3BH7Y6">
-                  <table>
-                    <tr><td><input type="hidden" name="on0" value="MENU30NOV" ><label class="font3 color-txt text-center">Donativos</label></td></tr><tr><td><select name="os0" class="form-control">
-                      <option value="1">$30.00 MXN</option>
-                      <option value="2">$50.00 MXN</option>
-                      <option value="3">$100.00 MXN</option>
-                      <option value="4">$200.00 MXN</option>
-                      <option value="5">$500.00 MXN</option>
-                      <option value="6">$1,000.00 MXN</option>
-                    </select> </td>
-                    <td>
-                      <input type="image" src="img/btn_11.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-                    </td>
-                  </tr>
-                  </table>
-                  <input type="hidden" name="currency_code" value="MXN">
-                  <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="btn-group">
+                        <input type="hidden" name="on0" value="MENU30NOV" >
+                        <select name="os0" class="form-control">
+                          <option value="1">$30.00 MXN</option>
+                          <option value="2">$50.00 MXN</option>
+                          <option value="3">$100.00 MXN</option>
+                          <option value="4">$200.00 MXN</option>
+                          <option value="5">$500.00 MXN</option>
+                          <option value="6">$1,000.00 MXN</option>
+                        </select>
+
+                        <input type="image" src="img/btn_11.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                        <input type="hidden" name="currency_code" value="MXN">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                      </div>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
