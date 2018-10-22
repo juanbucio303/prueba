@@ -18,6 +18,7 @@
     <script src="js/scrollreveal.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+        insert();
         $('.carousel').carousel();
         // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
         $('#inf2').hide();
@@ -44,6 +45,17 @@
           $("#btn-inf").show();
         });
       });
+      function insert(){
+        var html="";
+        for (var i = 1; i < 24; i++) {
+          if (i==8) {
+            html+='<figure class="col-2 no-padding"><img src="img/collage/cm.jpg" class="img-fluid"></figure>';
+
+          }
+          html+='<figure class="col-2 no-padding"><img src="img/collage/c'+i+'.png" class="img-fluid"></figure>';
+        }
+        $("#ins").html(html);
+      }
       // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
       smoothScroll.init({
       selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
@@ -64,7 +76,7 @@
   </head>
   <body>
 
-    <div class="container">
+    <!-- <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div id="mdb-lightbox-ui"></div>
@@ -72,16 +84,10 @@
           <figure class="col-md-6 view overlay cardBox">
             <div class="card">
               <img class="card-img-top" src="img/perros22.jpg" alt="Card image cap">
-              <!-- <a href="img/perros22.jpg" data-lightbox="Galeria-mitos" data-title="Mitos"> -->
-              <!-- <img src="img/perros22.jpg" class="img-fluid"> -->
-              <!-- </a> -->
             </div>
           </figure>
           <figure class="col-md-6 card2">
-
               <div class="card-body front text-justify">
-
-                <!-- <h4 class="card-title"><a>Card title</a></h4> -->
                 <div class="d-none d-lg-block d-print-block">
                   <p class="card-text"><h4 class="font3 color-txt">Los perros son los únicos mamíferos que realmente mirarán fijamente a los ojos
                     a un ser humano.</h4>
@@ -96,10 +102,7 @@
                     <h5 class="text-dang font">Jerry O'Conell</h5>
                   </p>
                 </div>
-
-
               </div>
-
               <div class="card-body back text-justify">
                 <div class="d-none d-lg-block d-print-block">
                   <p class="card-text "><h5 class="font3 color-txt">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS CALLEJEROS.</h5>
@@ -111,14 +114,12 @@
                     neuter their pets. Many owners allow their dogs to go out on their own, and that is when they frequently mate.</span></h5>
                   </p>
                 </div>
-
               </div>
           </figure>
           <figure class="col-md-6 view overlay zoom cardBox2">
             <div class="card">
               <a href="img/perros14.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
                 <img class="card-img-top" src="img/perros14.jpg" alt="Card image cap">
-                <!-- <img src="img/perros14.jpg" class="img-fluid" /> -->
               </a>
             </div>
           </figure>
@@ -150,14 +151,186 @@
                     neuter their pets. Many owners allow their dogs to go out on their own, and that is when they frequently mate.</span></h5>
                   </p>
                 </div>
-
               </div>
           </figure>
-
-
         </div>
       </div>
     </div>
-  </div>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
+    </figure>
+    <figure class="col-2 no-padding">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
+    </figure>
+  </div> -->
+  <!-- <div class="container">
+    <div class="row text-center" id="">
+
+    </div>
+  </div> -->
+    <!-- <div class="row text-center" id="">
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c1.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c2.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c3.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c4.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c5.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c6.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c7.png" class="img-fluid">
+      </figure>
+
+      <figure class="col-8 no-padding">
+        <img src="img/collage/cm.jpg" class="img-fluid">
+      </figure>
+
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c8.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c9.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c10.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c11.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c12.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c13.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c14.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c15.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c16.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c17.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c18.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c19.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c20.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c21.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c22.png" class="img-fluid">
+      </figure>
+      <figure class="col-2 no-padding">
+        <img src="img/collage/c23.png" class="img-fluid">
+      </figure>
+    </div>-->
+
+
+
+<div class="container">
+    <h1>Pure Css Responsive Masonry Gallery</h1>
+    <div class="col-md-7">
+      <div class="row">
+        <hr>
+    	  <div class="gal">
+          <img src="img/collage/c1.png" class="">
+
+          <img src="img/collage/c2.png" class="">
+
+          <img src="img/collage/c3.png" class="">
+
+          <img src="img/collage/c4.png" class="">
+
+          <img src="img/collage/c5.png" class="">
+
+          <img src="img/collage/c6.png" class="">
+
+          <img src="img/collage/c7.png" class="">
+
+          <img src="img/collage/cm.jpg" class="">
+
+          <img src="img/collage/c8.png" class="">
+
+          <img src="img/collage/c9.png" class="">
+
+          <img src="img/collage/c10.png" class="">
+
+          <img src="img/collage/c11.png" class="">
+
+          <img src="img/collage/c12.png" class="">
+
+          <img src="img/collage/c13.png" class="">
+
+          <img src="img/collage/c14.png" class="">
+
+          <img src="img/collage/c15.png" class="">
+
+          <img src="img/collage/c16.png" class="">
+
+          <img src="img/collage/c17.png" class="">
+
+          <img src="img/collage/c18.png" class="">
+
+          <img src="img/collage/c19.png" class="">
+
+          <img src="img/collage/c20.png" class="">
+
+          <img src="img/collage/c21.png" class="">
+
+          <img src="img/collage/c22.png" class="">
+
+          <img src="img/collage/c23.png" class="">
+
+
+    	  </div>
+      </div>
+    </div>
+</div>
+
+
   </body>
 </html>

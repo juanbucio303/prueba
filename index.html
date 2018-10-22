@@ -68,7 +68,19 @@
           $("#btn-atras").hide();
           $("#btn-inf").show();
         });
+        insert();
       });
+      function insert(){
+        var html="";
+        for (var i = 1; i < 9; i++) {
+          if (i==5) {
+            html+='<figure class="col-4 no-padding"><img src="img/collage/cm.jpg" class="img-fluid"></figure>';
+
+          }
+          html+='<figure class="col-4 no-padding"><img src="img/collage/c'+i+'.png" class="img-fluid"></figure>';
+        }
+        $("#ins").html(html);
+      }
       // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
       smoothScroll.init({
       selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
@@ -100,7 +112,17 @@
       </button>
       <div class="collapse navbar-collapse justify-content-center font-weight-bold" id="basicExampleNav">
         <ul class="navbar-nav">
-         <li class="nav-item">
+          <li class="nav-item font3">
+           <a class="nav-link" class="btn" data-toggle="modal" data-target="#denu">
+             <div class="esp">
+               Denucias
+             </div>
+             <div class="ing">
+               Complaints
+             </div>
+           </a>
+          </li>
+         <li class="nav-item font3">
           <a class="nav-link" data-scroll href="#sec-2">
             <div class="esp">
               Mitos, Mentiras y Verdades
@@ -115,17 +137,17 @@
          <img src="img/logo2.png" height="70" alt="">
         </a>
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <li class="nav-item font3">
             <a class="nav-link" data-scroll href="#sec-3">
               <div class="esp">
-                <i class="" style="font-size:1em"> $ </i>Donativos
+                <i class="font-weight-normal" style="font-size:1em;font-family:arial"> $ </i>Donativos
               </div>
               <div class="ing">
-                <i class="" style="font-size:1em"> $ </i>Donations
+                <i class="font-weight-normal" style="font-size:1em;font-family:arial"> $ </i>Donations
               </div>
             </a>
           </li>
-         <li class="nav-item">
+         <li class="nav-item font3">
           <a class="nav-link" data-scroll href="#sec-4">
             <div class="esp">
               <i class="fa fa-envelope" aria-hidden="true"></i> Contactanos
@@ -155,35 +177,54 @@
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-7">
-              <img src="img/donatvos.jpg" class="img-fluid z-depth-1" alt="Responsive image">
+              <div class="row" id="ins">
+
+              </div>
+              <!-- <img src="img/donatvos.jpg" class="img-fluid z-depth-1" alt="Responsive image"> -->
             </div>
-            <div class="col-md-5" style="background:rgba(21,21,21,.9);padding-top:10px">
-              <h4 class="font3 color-txt text-center font-weight-bold text-dang">
-                <div class="row">
-                  <div class="offset-md-2 col-md-6">
-                    <a class="" style="color:#C70038">NI UNO MÁS</a>
+              <div class="col-md-5" style="background:rgba(21,21,21,.9);padding-top:10px">
+                <div class="esp">
+                <h4 class="font3 color-txt text-center font-weight-bold text-dang">
+                  <div class="row">
+                    <div class="offset-md-2 col-md-6">
+                      <a class="" style="color:#C70038">NI UNO MÁS</a>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="offset-md-5 col-md- text-left">
+                  <div class="row">
+                    <div class="offset-md-5 col-md- text-left">
                       <a class="font3 text-white">EN LA</a> CALLE
+                    </div>
                   </div>
+                </h4>
+                <h6 class="font3 text-white text-justify" style="font-size:1.15em; padding-top:10px">Esterilizar es  <span class="font3 text-dang">AMARLOS</span> ,  protegerlos y eliminar el sufrimiento de
+                  millones de perros y gatos no deseados que acaban en las calles
+                  maltratados con hambre, frío y en una soledad muy dolorosa.
+                  <h6 class="font3 text-white text-justify" style="font-size:1.15em"><span class="font3 text-dang">México</span>, 1er lugar en población de <span class="font3 text-dang">perros y gatos callejeros</span>.</h6>
+                  <h6 class="font3 text-white text-center" style="font-size:1.15em">¿Cuántas veces hemos visto a gente ahuyentar a <span class="font3 text-dang">patadas</span> a un perro que se acerca buscando <span class="font3 text-dang">comida</span>?</h6>
+                  <h6 class="font3 text-white text-justify" style="font-size:1.15em; padding-bottom:10px">O perros y gatos que son <span class="font3 text-dang">atropellados</span>, sin que nadie pueda brindarles la <span class="font3 text-dang">atención médica</span> que requieren.
+                    <br><br> <span class="text-center">-----Esto es un problema que nos incumbe a <span class="font3 text-dang">TODOS</span>-----</span>  <br><br> Qué estas escenas, no se vuelvan parte de nuestro folklor.<br><br> <span class="font3 text-white">AYÚDANOS</span> a que cada día sean <span class="font3 text-dang">menos</span> los que <span class="font3 text-dang">sufran</span>.</h6></h6>
+                  </div>
+                  <div class="ing">
+                    <h4 class="font3 color-txt text-center font-weight-bold text-dang">
+                      <div class="row">
+                        <div class="offset-md-2 col-md-6">
+                          <a class="" style="color:#C70038">NOT ONE MORE</a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="offset-md-5 col-md- text-left">
+                          <a class="font3 text-white">ON THE</a> STREET
+                        </div>
+                      </div>
+                    </h4>
+                    <h6 class="font3 text-white text-justify" style="font-size:1.15em; padding-top:10px">To sterilize is to <span class="font3 text-dang">LOVE </span>,  them, to protect them and to eliminate the suffering of millions of dogs and unwanted cats that end up in the streets mistreated with hunger, cold and in a very painful solitude.
+                      <h6 class="font3 text-white text-justify" style="font-size:1.15em"><span class="font3 text-dang">México</span>, 1st place in the population of <span class="font3 text-dang">stray dogs and cats</span>.</h6>
+                      <h6 class="font3 text-white text-center" style="font-size:1.15em">How many times have we seen people <span class="font3 text-dang">chasing away</span> a dog that is approaching looking for <span class="font3 text-dang">food</span>?</h6>
+                      <h6 class="font3 text-white text-justify" style="font-size:1.15em; padding-bottom:10px">Or dogs and cats that are <span class="font3 text-dang">run over</span>, without anyone being able to provide them with the <span class="font3 text-dang">medical attention</span> they requieren.
+                        <br><br> <span class="text-center">-----This is a problem hat concerns us <span class="font3 text-dang">ALL</span>-----</span>  <br><br> What these scenes, do not become part of our folklore.<br><br> <span class="font3 text-white">HELP US</span> so that each day <span class="font3 text-dang">less</span> <span class="font3 text-dang">suffer.</span>.</h6></h6>
+                      </div>
+                    </div>
                 </div>
-              </h4>
-              <!-- <h6 class="font3 text-white " style=""> Adópta, esterilízalo, edúcalo, vacúnalo y sobre todo NUNCA lo abandones.</h6> -->
-
-              <h6 class="font3 text-white text-justify" style="font-size:1.15em; padding-top:10px">Esterilizar es  <span class="font3 text-dang">AMARLOS</span> ,  protegerlos y eliminar el sufrimiento de
-                          millones de perros y gatos no deseados que acaban en las calles
-                          maltratados con hambre, frío y en una soledad muy dolorosa.
-              <h6 class="font3 text-white text-justify" style="font-size:1.15em"><span class="font3 text-dang">México</span>, 1er lugar en población de <span class="font3 text-dang">perros y gatos callejeros</span>.</h6>
-              <h6 class="font3 text-white text-center" style="font-size:1.15em">¿Cuántas veces hemos visto a gente ahuyentar a <span class="font3 text-dang">patadas</span> a un perro que se acerca buscando <span class="font3 text-dang">comida</span>?</h6>
-              <h6 class="font3 text-white text-justify" style="font-size:1.15em; padding-bottom:10px">O perros y gatos que son <span class="font3 text-dang">atropellados</span>, sin que nadie pueda brindarles la <span class="font3 text-dang">atención médica</span> que requieren.
-              <br><br> <span class="text-center">-----Esto es un problema que nos incumbe a <span class="font3 text-dang">TODOS</span>-----</span>  <br><br> Qué estas escenas, no se vuelvan parte de nuestro folklor.<br><br> <span class="font3 text-white">AYÚDANOS</span> a que cada día sean <span class="font3 text-dang">menos</span> los que <span class="font3 text-dang">sufran</span>.</h6></h6>
-
-              <!-- <h5 class="font3 text-white text-justify">Esterilizar es amarlos protegernos y eliminar el sufrimiento de millones de perros no deseados que acaban en las calles maltratados con hambre frío y en una soledad muy dolorosa en Valle de Bravo y San Miguel de Allende hay aproximadamente 30,000 perros en esta situación.</h5> -->
-              <!-- <h6 class="font1 text-dang text-justify">To neuter is to love, protect, and eliminate suffering of millons of unwanted dogs which en up in the streets, mistreated, hungry, cold, and in very painful loneliness. Approximately 30,000 dogs in Valle de Bravo and San Miguel de Allende are in this situation.</h6> -->
-            </div>
-          </div>)
           <!-- <div class="mask waves-effect waves-light rgba-teal offset-md-7 col-md-5">
           </div> -->
         </div>
@@ -202,7 +243,7 @@
 
     </div>
 
-    <div class="row" style="" >
+    <div class="row" style="padding-top:15px" >
       <div class="offset-md-2" >
         <div class="esp">
           <h5 class="font3 text-white"> <a class="font3 text-center" style="color:#C70038">NO LOS COMPRES</a> <a class="font3 text-white"> Adópta, esterilízalo, edúcalo, vacúnalo y sobre todo NUNCA lo abandones.</a></h5>
@@ -313,12 +354,12 @@
                       <h5 class="font3 color-txt">MI PERRO O GATO VA A PERDER SU MASCULINIDAD.</h5>
                       <h5 class="font7 text-dang">FALSO: <span class="font2 color-txt">A menudo los hombres tienden a tener una visión antropomórfica de sus perros o gatos
                         con respecto a la esterilizaciónm sin embargo lo que nosotros llamamos masculinidad para ellos es frustración por querer aparearse y no
-                        permitírselo. <br>Queremos a nuestros perros y gatos por el cariño y amor que nos dan, su masculinidad a menudo se convierte en un problema, tanto para ellos, como para la familia, que tiene que lidiar con el marcaje territorial y peleas con otros machos</span></h5>
+                        permitírselo. <br>Queremos a nuestros perros y gatos por el cariño y amor que nos dan, su masculinidad a menudo se convierte en un problema, tanto para ellos, como para la familia, que tiene que lidiar con el marcaje territorial y peleas con otros machos.</span></h5>
                     </div>
                     <div class="ing" id="">
                       <h5 class="font3 color-txt">MY DOG OR CAT WILL LOSE HIS MASCULINITY</h5>
                       <h5 class="font7 text-dang">FALSE: <span class="font2 text-white">Some men tend to have an anthropomorphic vision of their male dogs or cats in respect to castration. Nonetheless, what
-                        we call masculinity in humans refers to frustration in them. <br>It is frustrating for them to want to mate and not be allowed to.<br> We love our dogs and cats because of the love and affection they give us back, and sometimes this masculinity becomes a problem both for the them, and for the people dealng with territorial markings and competitiveness with other males</span></h5>
+                        we call masculinity in humans refers to frustration in them. <br>It is frustrating for them to want to mate and not be allowed to.<br> We love our dogs and cats because of the love and affection they give us back, and sometimes this masculinity becomes a problem both for the them, and for the people dealng with territorial markings and competitiveness with other males.</span></h5>
                     </div>
 
                     </p>
@@ -342,7 +383,7 @@
                         eternos amigos que nunca traicionan.<br>
                         Porque están vivos.<br>
                         Por esto y mil cosas más merecen nuestro amor.<br>
-                        Si aprendemos a amarlos y tratarlos como se merecen estaremos más cerca de Dios
+                        Si aprendemos a amarlos y tratarlos como se merecen estaremos más cerca de Dios.
                       </h5>
                     </p>
                     <p class="card-text">
@@ -436,7 +477,7 @@
                       <h5 class="font3 color-txt">NEUTERING CHANGES THEIR CHARACTER</h5>
                       <h5 class="font7 text-dang">FALSE: <span class="font2 text-white">The only aspects of a dog's character that change are precisely those that benefit the interaction whit them,
                         which is why most dogs that are trained for specific reasons, such as therapy dogs, must be neutered.<br>  It makes them become more centered, without the effects of hormones that incite them to mate.<br>
-                        Neutering prevents behaviors such as markings, dogs and cats escaping to find a mating partner, anxiety, blood stains during heat cycles, apartamento frontera the crear health benéfica mentioned</span></h5>
+                        Neutering prevents behaviors such as markings, dogs and cats escaping to find a mating partner, anxiety, blood stains during heat cycles, apartamento frontera the crear health benéfica mentioned.</span></h5>
                     </div>
                       </p>
                 </div>
@@ -489,7 +530,7 @@
                       </div>
                       <div class="ing" id="">
                         <h5 class="font3 color-txt">NEUTERING SURGERIES ARE VERY RISKY.</h5>
-                        <h5 class="font7 text-dang">FALSE: <span class="font2 text-dang">The sugery to neuter an animal is one of the simplest and faster
+                        <h5 class="font7 text-dang">FALSE: <span class="font2 text-white">The sugery to neuter an animal is one of the simplest and faster
                           procedures done very day an whit a minimal accident rate in clinics around the world. <br>On the other hand, It is a huge health risk to not neuter a dog, increasing the risk
                           of conditions such as breast cancer or prostatic hypertrophy causing urinary problems.<br> It is also
                           proven by research that neutered dogs have a greater life expectancy.</span></h5>
@@ -954,15 +995,20 @@
             <img src="img/logo2.png" alt="" width="50%" style="padding-right:10px"> <a href="http://www.livavalledebravo.org/" target="_blan"><img src="img/logo-liva.png" width="30%" alt=""></a>
           </div>
         </div>
-        <div class="col-md-2 d-none d-lg-block d-print-block">
-          ss="offset-2 col-md-8">
+        <div class="col-12 d-none d-lg-block d-print-block">
+          <div class="offset-2 col-md-8">
             <img src="img/logo2.png" alt="" width="20%" style="padding-right:10px"> <a href="http://www.livavalledebravo.org/" target="_blan"><img src="img/logo-liva.png" width="10%" alt=""></a>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="offset-2 col-8 col-md-8">
-          <h4 class="font3 text-white">Juntos por Amor a los animales </h4>
+          <div class="esp">
+            <h4 class="font3 text-white">Juntos por Amor a los animales </h4>
+          </div>
+          <div class="ing">
+            <h4 class="font3 text-white">Together for Love of Animals</h4>
+          </div>
         </div>
       </div>
     </div>
@@ -984,7 +1030,12 @@
             <div class="col-md-4">
               <div class="row">
                 <div class="col-md-8">
-                  <h5 class="font text-white">Proyecto desarrollado por:</h5>
+                  <div class="esp">
+                    <h5 class="font text-white">Proyecto desarrollado por:</h5>
+                  </div>
+                  <div class="ing">
+                    <h5 class="font text-white">Project developed by</h5>
+                  </div>
                   <img src="img/logo-direc.png" width="50%" alt="">
 
                 </div>
@@ -1013,22 +1064,43 @@
       </footer>
       <!-- Footer -->
 
-      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+      <!-- Full Height Modal Right -->
+  <div class="modal fade top" id="denu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-full-height modal-top" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title w-100 text-center" id="myModalLabel">PROPAEM
+              Denuncias Anónimas de Maltrato animal
+              (722) 213 5456 Ext. 105
+              <span class="font3"><a href="http://www.tramitesyservicios.edomex.gob.mx/dencma/" target="_blank">http://www.tramitesyservicios.edomex.gob.mx/dencma/</a></span>
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6">
+                <img src="img/denuncia/d1.jpeg" alt="">
+              </div>
+              <div class="col-6">
+                <img src="img/denuncia/d2.jpeg" alt="">
+              </div>
+              <div class="col-6">
+                <img src="img/denuncia/d3.jpeg" alt="">
+              </div>
+              <div class="col-6">
+                <img src="img/denuncia/d4.jpeg" alt="">
+              </div>
             </div>
-            <div class="modal-body">
-              ...
-            </div>
+          </div>
+          <div class="modal-footer justify-content-center">
 
           </div>
         </div>
       </div>
+    </div>
+    <!-- Full Height Modal Right -->
 
       <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
