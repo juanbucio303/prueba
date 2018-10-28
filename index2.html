@@ -1,336 +1,172 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Curso</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/mdb.min.css">
-    <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="css/lightbox.css">
-    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
-    <script src="js/popper.min.js" charset="utf-8"></script>
-    <script src="js/mdb.min.js" charset="utf-8"></script>
-    <script src="js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/lightbox.js" charset="utf-8"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/fontawesome-all.js" charset="utf-8"></script>
-    <script src="js/parallax.js" charset="utf-8"></script>
-    <script src="js/scrollreveal.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        insert();
-        $('.carousel').carousel();
-        // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
-        $('#inf2').hide();
-        $("#btn-atras").hide();
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        $('.parallax-window').parallax({
-          imageSrc: 'img/huellas2.png'
-        });
-        $('#btn-inf').click(function(){
-          $("#inf1").hide();
-          $("#inf2").show();
-          $("#btn-inf").hide();
-          $("#btn-atras").show();
-          window.sr = ScrollReveal();
-          sr.reveal('#inf2', {
-            duration: 3000,
-            origin: 'left'
-          });
-        });
-        $('#btn-atras').click(function(){
-          $("#inf1").show();
-          $("#inf2").hide();
-          $("#btn-atras").hide();
-          $("#btn-inf").show();
-        });
-      });
-      function insert(){
-        var html="";
-        for (var i = 1; i < 24; i++) {
-          if (i==8) {
-            html+='<figure class="col-2 no-padding"><img src="img/collage/cm.jpg" class="img-fluid"></figure>';
-
-          }
-          html+='<figure class="col-2 no-padding"><img src="img/collage/c'+i+'.png" class="img-fluid"></figure>';
-        }
-        $("#ins").html(html);
-      }
-      // $('.parallax-window').parallax({imageSrc: 'img/perritos2.jpg'});
-      smoothScroll.init({
-      selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
-      selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
-      speed: 2000, // Integer. How fast to complete the scroll in milliseconds
-      easing: 'easeInOutCubic', // Easing pattern to use
-      offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-      callback: function ( anchor, toggle ) {} // Function to run after scrolling
-      });
-
-      // window.sr = ScrollReveal();
-      //
-      // sr.reveal('.navbar', {
-      //   duration: 2000,
-      //   origin: 'bottom'
-      // });
-    </script>
-  </head>
-  <body>
-
-    <!-- <div class="container">
+  <!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <br><br><br><br><br>
+   <section id="section-feature" class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div id="mdb-lightbox-ui"></div>
-        <div class=" row mdb-lightbox no-margin">
-          <figure class="col-md-6 view overlay cardBox">
-            <div class="card">
-              <img class="card-img-top" src="img/perros22.jpg" alt="Card image cap">
-            </div>
-          </figure>
-          <figure class="col-md-6 card2">
-              <div class="card-body front text-justify">
-                <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text"><h4 class="font3 color-txt">Los perros son los únicos mamíferos que realmente mirarán fijamente a los ojos
-                    a un ser humano.</h4>
-                  </p>
-                  <p class="card-text ">
-                    <h5 class="font color-txt">Jerry O'Conell</h5>
-                  </p>
-                  <p class="card-text  "> <h4 class="text-dang font3">Dogs are the only mammals that will actually
-                      stare and look into human's eyes.</h4>
-                  </p>
-                  <p class="card-text ">
-                    <h5 class="text-dang font">Jerry O'Conell</h5>
-                  </p>
+        <ul>
+            <li id="sf-innovation" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="sf-wrap">
+                    <div class="sf-mdl-left">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-rocket fa-5x"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                    </div>
+                    <div class="sf-mdl-right">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-rocket fa-5x"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+
+                    </div>
+
+                    <div class="sf-mdl-left-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-rocket fa-5x"></i>
+                        </div>
+
+                        <h3><a href="#">Responsive Design</a>
+                        </h3>
+                        <p>Curabitur blandit tempus ardua ridiculus sed magna. Integer legentibus erat a ante historiarum dapibus.</p>
+
+                    </div>
+                    <div class="sf-mdl-right-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-rocket fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Responsive Design</a></h3>
+                        <p>Curabitur blandit tempus ardua ridiculus sed magna. Integer legentibus erat a ante historiarum dapibus.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="card-body back text-justify">
-                <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h5 class="font3 color-txt">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS CALLEJEROS.</h5>
-                    <h5 class="font3 text-dang">Falso: <span class="font3 color-txt">La fábrica de perros, está en las casas de dueños que no
-                    esterilizan a sus animales. Muchos dueños permiten que sus animales
-                    salgan de casa solos y es ahí cuando frecuentemente se cruzan.</span></h5>
-                    <h5 class="font3 text-dang">NEUTERING SHOULD ONLY BE DONE ON STREET DOGS</h5>
-                    <h5 class="font3 color-txt">False: <span class="text-dang">The main dog factories are in the houses of the owners who don't
-                    neuter their pets. Many owners allow their dogs to go out on their own, and that is when they frequently mate.</span></h5>
-                  </p>
+            </li>
+
+            <li id="sf-community" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="sf-wrap">
+                    <div class="sf-mdl-left">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-camera-retro fa-5x"></i>
+                        </div>
+                        <h3>Loves Photography</h3>
+                    </div>
+                    <div class="sf-mdl-right">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-camera-retro fa-5x"></i>
+                        </div>
+                        <h3>Loves Photography</h3>
+                    </div>
+
+                    <div class="sf-mdl-left-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-camera-retro fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Loves Photography</a></h3>
+                        <p>Hi omnes lingua, institutis, legibus inter se differunt. Donec sed odio operae, eu vulputate felis rhoncus.</p>
+                    </div>
+                    <div class="sf-mdl-right-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-camera-retro fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Loves Photography</a></h3>
+                        <p>Hi omnes lingua, institutis, legibus inter se differunt. Donec sed odio operae, eu vulputate felis rhoncus.</p>
+                    </div>
                 </div>
-              </div>
-          </figure>
-          <figure class="col-md-6 view overlay zoom cardBox2">
-            <div class="card">
-              <a href="img/perros14.jpg" data-lightbox="Galeria-mitos" data-title="Mitos">
-                <img class="card-img-top" src="img/perros14.jpg" alt="Card image cap">
-              </a>
-            </div>
-          </figure>
-          <figure class="col-md-6 card22">
-              <div class="card-body front2 text-justify">
-                <div class="d-none d-lg-block d-print-block">
-                    <p class="card-text "><h4 class="font3 color-txt">Los perros nunca me muerden.
-                      Sólo los seres humanos lo hacen.
-                    </h4>
-                  </p>
-                  <p class="card-text">
-                    <h5 class="font color-txt">Marilyn Monroe</h5>
-                  </p>
-                  <p class="card-text  "> <h4 class="text-dang font3">Dogs never bite me. Just humans.</h4>
-                  </p>
-                  <p class="card-text ">
-                    <h5 class="text-dang font">Marilyn Monroe</h5>
-                  </p>
+            </li>
+
+            <li id="sf-academy" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="sf-wrap">
+                    <div class="sf-mdl-left">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-cloud-upload fa-5x"></i>
+                        </div>
+                        <h3>Retina Display</h3>
+                    </div>
+                    <div class="sf-mdl-right">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-cloud-upload fa-5x"></i>
+                        </div>
+                        <h3>Retina Display</h3>
+                    </div>
+
+                    <div class="sf-mdl-left-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-cloud-upload fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Retina Display</a></h3>
+                        <p>Nec dubitamus multa iter quae et nos invenerat. Ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+                    </div>
+                    <div class="sf-mdl-right-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-cloud-upload fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Retina Display</a></h3>
+                        <p>Nec dubitamus multa iter quae et nos invenerat. Ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="card-body back2 text-justify">
-                <div class="d-none d-lg-block d-print-block">
-                  <p class="card-text "><h5 class="font3 color-txt">LA ESTERILIZACIÓN, SÓLO DEBE SER EN PERROS CALLEJEROS.</h5>
-                    <h5 class="font3 text-dang">Falso: <span class="font3 color-txt">La fábrica de perros, está en las casas de dueños que no
-                    esterilizan a sus animales. Muchos dueños permiten que sus animales
-                    salgan de casa solos y es ahí cuando frecuentemente se cruzan.</span></h5>
-                    <h5 class="font3 text-dang">NEUTERING SHOULD ONLY BE DONE ON STREET DOGS</h5>
-                    <h5 class="font3 color-txt">False: <span class="text-dang">The main dog factories are in the houses of the owners who don't
-                    neuter their pets. Many owners allow their dogs to go out on their own, and that is when they frequently mate.</span></h5>
-                  </p>
+            </li>
+
+            <li id="sf-opportunity" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="sf-wrap">
+                    <div class="sf-mdl-left">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-star-half-o fa-5x"></i>
+                        </div>
+                        <h3>Source File Included</h3>
+                    </div>
+                    <div class="sf-mdl-right">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-star-half-o fa-5x"></i>
+                        </div>
+                        <h3>Source File Included</h3>
+                    </div>
+
+                    <div class="sf-mdl-left-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-star fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Source File Included</a></h3>
+                        <p>Morbi fringilla convallis sapien, id pulvinar odio volutpat. Contra legem facit qui id facit quod lex prohibet.</p>
+                    </div>
+                    <div class="sf-mdl-right-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-star fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Source File Included</a></h3>
+                        <p>Morbi fringilla convallis sapien, id pulvinar odio volutpat. Contra legem facit qui id facit quod lex prohibet.</p>
+                    </div>
                 </div>
-              </div>
-          </figure>
-        </div>
-      </div>
+            </li>
+        </ul>
     </div>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg" class="img-fluid">
-    </figure>
-    <figure class="col-2 no-padding">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg" class="img-fluid">
-    </figure>
-  </div> -->
-  <!-- <div class="container">
-    <div class="row text-center" id="">
+</section>
+<script>
+    $(function () {
+    $('#section-feature .sf-wrap')
+        .hover(function() {
+            $(this).addClass('hover');
+        }, function() {
+            $(this).removeClass('hover');
+        })
+        .click(function(event) {
+            //if (event.target.nodeName != 'A') {
+                $(this).toggleClass('active');
+            //}
+        });
+});
 
-    </div>
-  </div> -->
-    <!-- <div class="row text-center" id="">
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c1.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c2.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c3.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c4.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c5.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c6.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c7.png" class="img-fluid">
-      </figure>
-
-      <figure class="col-8 no-padding">
-        <img src="img/collage/cm.jpg" class="img-fluid">
-      </figure>
-
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c8.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c9.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c10.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c11.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c12.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c13.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c14.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c15.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c16.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c17.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c18.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c19.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c20.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c21.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c22.png" class="img-fluid">
-      </figure>
-      <figure class="col-2 no-padding">
-        <img src="img/collage/c23.png" class="img-fluid">
-      </figure>
-    </div>-->
-
-
-
-<div class="container">
-    <h1>Pure Css Responsive Masonry Gallery</h1>
-    <div class="col-md-7">
-      <div class="row">
-        <hr>
-    	  <div class="gal">
-          <img src="img/collage/c1.png" class="">
-
-          <img src="img/collage/c2.png" class="">
-
-          <img src="img/collage/c3.png" class="">
-
-          <img src="img/collage/c4.png" class="">
-
-          <img src="img/collage/c5.png" class="">
-
-          <img src="img/collage/c6.png" class="">
-
-          <img src="img/collage/c7.png" class="">
-
-          <img src="img/collage/cm.jpg" class="">
-
-          <img src="img/collage/c8.png" class="">
-
-          <img src="img/collage/c9.png" class="">
-
-          <img src="img/collage/c10.png" class="">
-
-          <img src="img/collage/c11.png" class="">
-
-          <img src="img/collage/c12.png" class="">
-
-          <img src="img/collage/c13.png" class="">
-
-          <img src="img/collage/c14.png" class="">
-
-          <img src="img/collage/c15.png" class="">
-
-          <img src="img/collage/c16.png" class="">
-
-          <img src="img/collage/c17.png" class="">
-
-          <img src="img/collage/c18.png" class="">
-
-          <img src="img/collage/c19.png" class="">
-
-          <img src="img/collage/c20.png" class="">
-
-          <img src="img/collage/c21.png" class="">
-
-          <img src="img/collage/c22.png" class="">
-
-          <img src="img/collage/c23.png" class="">
-
-
-    	  </div>
-      </div>
-    </div>
-</div>
-
-
-  </body>
+</script>
+</body>
 </html>
